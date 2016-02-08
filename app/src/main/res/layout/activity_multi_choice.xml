@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#FFFF00"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context="raksam.com.totoran.SingleChoiceActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF"
+            android:textColor="@drawable/button_text_color_red"
+            android:textSize="30sp"
+            android:text="マルチ選択"/>
+        <!-- 中抜き文字装飾できねえかな？？？？？？？？？？？？-->
+
+        <!-- 1枠　-->
+        <LinearLayout
+            android:id="@+id/waku_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button1_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button1_1"/>
+
+            <Button
+                android:id="@+id/button1_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button1_2"/>
+
+            <Button
+                android:id="@+id/button1_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button1_3"/>
+
+        </LinearLayout>
+
+        <!-- 2枠　-->
+        <LinearLayout
+            android:id="@+id/waku_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button2_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button2_1"/>
+
+            <Button
+                android:id="@+id/button2_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button2_2"/>
+
+            <Button
+                android:id="@+id/button2_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button2_3"/>
+
+        </LinearLayout>
+
+        <!-- 3枠　-->
+        <LinearLayout
+            android:id="@+id/waku_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button3_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button3_1"/>
+
+            <Button
+                android:id="@+id/button3_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button3_2"/>
+
+            <Button
+                android:id="@+id/button3_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button3_3"/>
+
+        </LinearLayout>
+
+        <!-- 4枠　-->
+        <LinearLayout
+            android:id="@+id/waku_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button4_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button4_1"/>
+
+            <Button
+                android:id="@+id/button4_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button4_2"/>
+
+            <Button
+                android:id="@+id/button4_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button4_3"/>
+
+        </LinearLayout>
+
+        <!-- 5枠　-->
+        <LinearLayout
+            android:id="@+id/waku_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button5_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button5_1"/>
+
+            <Button
+                android:id="@+id/button5_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button5_2"/>
+
+            <Button
+                android:id="@+id/button5_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button5_3"/>
+
+        </LinearLayout>
+
+        <!-- 6枠　-->
+        <LinearLayout
+            android:id="@+id/waku_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button6_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button6_1"/>
+
+            <Button
+                android:id="@+id/button6_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button6_2"/>
+
+            <Button
+                android:id="@+id/button6_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button6_3"/>
+
+        </LinearLayout>
+
+        <!-- 7枠　-->
+        <LinearLayout
+            android:id="@+id/waku_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button7_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button7_1"/>
+
+            <Button
+                android:id="@+id/button7_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button7_2"/>
+
+            <Button
+                android:id="@+id/button7_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button7_3"/>
+
+        </LinearLayout>
+
+        <!-- 8枠　-->
+        <LinearLayout
+            android:id="@+id/waku_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button8_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button8_1"/>
+
+            <Button
+                android:id="@+id/button8_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button8_2"/>
+
+            <Button
+                android:id="@+id/button8_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button8_3"/>
+
+        </LinearLayout>
+
+        <!-- 9枠　-->
+        <LinearLayout
+            android:id="@+id/waku_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button9_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button9_1"/>
+
+            <Button
+                android:id="@+id/button9_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button9_2"/>
+
+            <Button
+                android:id="@+id/button9_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button9_3"/>
+
+        </LinearLayout>
+
+        <!-- 10枠　-->
+        <LinearLayout
+            android:id="@+id/waku_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button10_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button10_1"/>
+
+            <Button
+                android:id="@+id/button10_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button10_2"/>
+
+            <Button
+                android:id="@+id/button10_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button10_3"/>
+
+        </LinearLayout>
+
+        <!-- 11枠　-->
+        <LinearLayout
+            android:id="@+id/waku_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button11_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button11_1"/>
+
+            <Button
+                android:id="@+id/button11_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button11_2"/>
+
+            <Button
+                android:id="@+id/button11_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button11_3"/>
+
+        </LinearLayout>
+
+        <!-- 12枠　-->
+        <LinearLayout
+            android:id="@+id/waku_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button12_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button12_1"/>
+
+            <Button
+                android:id="@+id/button12_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button12_2"/>
+
+            <Button
+                android:id="@+id/button12_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button12_3"/>
+
+        </LinearLayout>
+
+        <!-- 13枠　-->
+        <LinearLayout
+            android:id="@+id/waku_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button13_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button13_1"/>
+
+            <Button
+                android:id="@+id/button13_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button13_2"/>
+
+            <Button
+                android:id="@+id/button13_3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/button_text_color_red"
+                android:background="@drawable/button_shape_red"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="button13_3"/>
+
+        </LinearLayout>
+
+        <!-- クリアボタン -->
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@drawable/button_text_color_red"
+            android:background="@drawable/button_shape_red"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="CLEAR"/>
+
+        <!-- 戻る・次へ -->
+        <LinearLayout
+            android:id="@+id/next_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="戻る"/>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="次へ"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

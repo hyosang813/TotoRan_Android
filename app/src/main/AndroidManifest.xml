@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="raksam.com.totoran">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- NENDとかデータ取得とか -->
     <application
         android:name=".Common"
         android:allowBackup="true"
@@ -10,31 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:screenOrientation="portrait"
-            android:name=".MainActivity">
-            <intent-filter
-                android:label="トトラン！"
-                >
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter android:label="トトラン！">
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- シングル選択画面-->
-        <!--<activity-->
-            <!--android:name=".SingleChoiceActivity"-->
-            <!--android:screenOrientation="portrait">-->
-        <!--</activity>-->
 
-        <!-- マルチ選択画面-->
-        <!--<activity-->
-        <!--android:name=".MultiChoiceActivity"-->
-        <!--android:screenOrientation="portrait">-->
-        <!--</activity>-->
+        <!--シングル選択画面-->
+        <activity
+            android:name=".SingleChoiceActivity"
+            android:screenOrientation="portrait">
+        </activity>
 
-        <!-- このあとはiOSだとナビゲーションコントローラなんだけどAndroidにも同じような仕組みあんのかね？？？？？-->
+         <!--マルチ選択画面 -->
+         <activity
+             android:name=".MultiChoiceActivity"
+             android:screenOrientation="portrait">
+         </activity>
+
+
+        <!-- このあとはiOSだとナビゲーションコントローラなんだけどAndroidにも同じような仕組みあんのかね？？？？？ -->
+
 
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- NENDとかデータ取得とか -->
 
 </manifest>
