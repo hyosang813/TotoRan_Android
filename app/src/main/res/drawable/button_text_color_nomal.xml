@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Buttonが押された時は薄く -->
+    <item android:state_pressed="true"
+        android:color="#32000000" />
+     <!--0~255の間で50くらいを１６進数変換すると32になる -->
+
+    <!-- Buttonが押されてない時は黒 -->
+    <item android:state_pressed="false"
+        android:color="#000000" />
+
+</selector>
