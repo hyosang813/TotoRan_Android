@@ -22,21 +22,25 @@
             </intent-filter>
         </activity>
 
-        <!--シングル選択画面-->
+        <!-- シングル選択画面 -->
         <activity
             android:name=".SingleChoiceActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
 
-         <!--マルチ選択画面 -->
-         <activity
-             android:name=".MultiChoiceActivity"
-             android:screenOrientation="portrait">
-         </activity>
+        <!-- マルチ選択画面 -->
+        <activity
+            android:name=".MultiChoiceActivity"
+            android:screenOrientation="portrait" />
 
+        <!-- シングル詳細指定画面 -->
+        <activity
+            android:name=".SingleDetailActivity"
+            android:screenOrientation="portrait" />
 
-        <!-- このあとはiOSだとナビゲーションコントローラなんだけどAndroidにも同じような仕組みあんのかね？？？？？ -->
-
+        <!-- シングル詳細指定画面 -->
+        <activity
+            android:name=".MultiDetailActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

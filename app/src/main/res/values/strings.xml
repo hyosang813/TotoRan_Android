@@ -7,5 +7,19 @@
     <string name="odds_confirm">支持率確認</string>
     <string name="data_get">データ再取得</string>
 
+    <!-- シングル条件指定画面 -->
+    <string name="hda_title">■「ホーム、ドロー、アウェイ」の数</string>
+    <string name="home_title">　・「ホーム」の数　</string>
+    <string name="draw_title">　・「ドロー」の数　</string>
+    <string name="away_title">　・「アウェイ」の数</string>
+    <string name="unit_title">■口数(最大１０口)</string>
+    <string name="ijou_str">以上</string>
+    <string name="unit_str">口</string>
+
+    <!-- マルチ条件指定画面 -->
+    <string name="dt_title">■「ダブル、トリプル」の数</string>
+    <string name="double_title">・「ダブル」の数　</string>
+    <string name="triple_title">・「トリプル」の数</string>
+
 
 </resources>
