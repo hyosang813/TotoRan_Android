@@ -41,7 +41,8 @@
         <activity
             android:name=".MultiDetailActivity"
             android:screenOrientation="portrait" />
-
+        <activity android:name=".SingleResultActivity" />
+        <activity android:name=".MultiResultActivity"></activity>
     </application>
 
 </manifest>

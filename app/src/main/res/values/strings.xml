@@ -21,5 +21,12 @@
     <string name="double_title">・「ダブル」の数　</string>
     <string name="triple_title">・「トリプル」の数</string>
 
+    <!-- シングル結果画面 -->
+    <string name="copy_str">コピー</string>
+
+    <!-- マルチ結果画面 -->
+    <string name="puchi_str">プチ削減</string>
+    <string name="hantei_str">判定表示</string>
+
 
 </resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFF00"
+    android:orientation="vertical"
+    android:gravity="top"
+    tools:context="raksam.com.totoran.MultiResultActivity">
+
+    <!-- 画面タイトル -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:textColor="@drawable/button_text_color_red"
+        android:textSize="30sp"
+        android:text="マルチ結果"/>
+    <!-- 中抜き文字装飾できねえかな？？？？？？？？？？？？-->
+
+    <!-- 結果表示領域 -->
+    <TextView
+        android:id="@+id/result_text_view_multi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="13"
+        android:background="@drawable/pick_value_shape"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="01 ドルト － ハノフ [1--]\n02 ヴォル － インゴ [1--]\n03 シュツ － ヘルタ [1--]\n04 ブレメ － ホッフ [1--]\n05 ケルン － フラン [1--]\n06 ダルム － レバク [-0-]\n07 ボンマ － ストク [--2]\n08 クリス － ワトフ [--2]\n09 エヴァ － ウェブ [10-]\n10 スウォ － サウザ [-0-]\n11 チェル － ニュカ [10-]\n12 サンダ － マンウ [--2]\n13 ノウチ － ウェハ [1--]"
+        android:textSize="18sp" />
+
+    <!-- ボタン群 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <!-- プチ削減ボタン -->
+        <Button
+            android:id="@+id/puchi_button_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape_nomal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/puchi_str"/>
+
+        <!-- 判定ボタン -->
+        <Button
+            android:id="@+id/hantei_button_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape_nomal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/hantei_str"/>
+
+        <!-- コピーボタン -->
+        <Button
+            android:id="@+id/copy_button_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape_nomal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/copy_str"/>
+
+    </LinearLayout>
+
+    <!-- 戻るボタン -->
+    <Button
+        android:id="@+id/back_for_result_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="戻る"/>
+
+
+</LinearLayout>

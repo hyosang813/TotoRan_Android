@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Intent i = new Intent();
-        i.setClassName("raksam.com.totoran", "raksam.com.totoran.MultiDetailActivity");
+        i.setClassName("raksam.com.totoran", "raksam.com.totoran.MultiResultActivity");
         startActivity(i);
 
     }
