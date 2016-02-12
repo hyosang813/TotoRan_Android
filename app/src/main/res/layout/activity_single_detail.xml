@@ -192,6 +192,7 @@
             android:paddingRight="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:onClick="goBack"
             android:text="@string/back_str"/>
 
         <Button
@@ -202,6 +203,7 @@
             android:paddingRight="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:onClick="singleResultTransition"
             android:text="@string/next_str"/>
 
     </LinearLayout>

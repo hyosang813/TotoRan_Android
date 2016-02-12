@@ -28,6 +28,7 @@
         android:background="@drawable/button_shape_nomal"
         android:textColor="@drawable/button_text_color_nomal"
         android:text="@string/single_button"
+        android:onClick="singleChoiceTransition"
         android:layout_weight="1"/>
 
     <Button
@@ -38,6 +39,7 @@
         android:background="@drawable/button_shape_nomal"
         android:textColor="@drawable/button_text_color_nomal"
         android:text="@string/multi_button"
+        android:onClick="multiChoiceTransition"
         android:layout_weight="1"/>
 
     <Button

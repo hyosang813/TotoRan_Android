@@ -99,6 +99,7 @@
         android:layout_gravity="center"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
+        android:onClick="goBack"
         android:text="@string/back_str"/>
 
 
