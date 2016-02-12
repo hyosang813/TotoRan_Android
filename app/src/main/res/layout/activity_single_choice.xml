@@ -38,7 +38,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button1_1"
+                android:id="@+id/single_button1_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -48,7 +48,7 @@
                 android:text="button1_1"/>
 
             <Button
-                android:id="@+id/button1_2"
+                android:id="@+id/single_button1_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -58,7 +58,7 @@
                 android:text="button1_2"/>
 
             <Button
-                android:id="@+id/button1_3"
+                android:id="@+id/single_button1_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -79,7 +79,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button2_1"
+                android:id="@+id/single_button2_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -89,7 +89,7 @@
                 android:text="button2_1"/>
 
             <Button
-                android:id="@+id/button2_2"
+                android:id="@+id/single_button2_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -99,7 +99,7 @@
                 android:text="button2_2"/>
 
             <Button
-                android:id="@+id/button2_3"
+                android:id="@+id/single_button2_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -120,7 +120,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button3_1"
+                android:id="@+id/single_button3_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -130,7 +130,7 @@
                 android:text="button3_1"/>
 
             <Button
-                android:id="@+id/button3_2"
+                android:id="@+id/single_button3_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -140,7 +140,7 @@
                 android:text="button3_2"/>
 
             <Button
-                android:id="@+id/button3_3"
+                android:id="@+id/single_button3_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -161,7 +161,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button4_1"
+                android:id="@+id/single_button4_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -171,7 +171,7 @@
                 android:text="button4_1"/>
 
             <Button
-                android:id="@+id/button4_2"
+                android:id="@+id/single_button4_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -181,7 +181,7 @@
                 android:text="button4_2"/>
 
             <Button
-                android:id="@+id/button4_3"
+                android:id="@+id/single_button4_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -202,7 +202,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button5_1"
+                android:id="@+id/single_button5_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -212,7 +212,7 @@
                 android:text="button5_1"/>
 
             <Button
-                android:id="@+id/button5_2"
+                android:id="@+id/single_button5_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -222,7 +222,7 @@
                 android:text="button5_2"/>
 
             <Button
-                android:id="@+id/button5_3"
+                android:id="@+id/single_button5_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -243,7 +243,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button6_1"
+                android:id="@+id/single_button6_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -253,7 +253,7 @@
                 android:text="button6_1"/>
 
             <Button
-                android:id="@+id/button6_2"
+                android:id="@+id/single_button6_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -263,7 +263,7 @@
                 android:text="button6_2"/>
 
             <Button
-                android:id="@+id/button6_3"
+                android:id="@+id/single_button6_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -284,7 +284,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button7_1"
+                android:id="@+id/single_button7_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -294,7 +294,7 @@
                 android:text="button7_1"/>
 
             <Button
-                android:id="@+id/button7_2"
+                android:id="@+id/single_button7_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -304,7 +304,7 @@
                 android:text="button7_2"/>
 
             <Button
-                android:id="@+id/button7_3"
+                android:id="@+id/single_button7_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -325,7 +325,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button8_1"
+                android:id="@+id/single_button8_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -335,7 +335,7 @@
                 android:text="button8_1"/>
 
             <Button
-                android:id="@+id/button8_2"
+                android:id="@+id/single_button8_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -345,7 +345,7 @@
                 android:text="button8_2"/>
 
             <Button
-                android:id="@+id/button8_3"
+                android:id="@+id/single_button8_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -366,7 +366,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button9_1"
+                android:id="@+id/single_button9_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -376,7 +376,7 @@
                 android:text="button9_1"/>
 
             <Button
-                android:id="@+id/button9_2"
+                android:id="@+id/single_button9_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -386,7 +386,7 @@
                 android:text="button9_2"/>
 
             <Button
-                android:id="@+id/button9_3"
+                android:id="@+id/single_button9_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -407,7 +407,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button10_1"
+                android:id="@+id/single_button10_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -417,7 +417,7 @@
                 android:text="button10_1"/>
 
             <Button
-                android:id="@+id/button10_2"
+                android:id="@+id/single_button10_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -427,7 +427,7 @@
                 android:text="button10_2"/>
 
             <Button
-                android:id="@+id/button10_3"
+                android:id="@+id/single_button10_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -448,7 +448,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button11_1"
+                android:id="@+id/single_button11_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -458,7 +458,7 @@
                 android:text="button11_1"/>
 
             <Button
-                android:id="@+id/button11_2"
+                android:id="@+id/single_button11_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -468,7 +468,7 @@
                 android:text="button11_2"/>
 
             <Button
-                android:id="@+id/button11_3"
+                android:id="@+id/single_button11_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -489,7 +489,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button12_1"
+                android:id="@+id/single_button12_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -499,7 +499,7 @@
                 android:text="button12_1"/>
 
             <Button
-                android:id="@+id/button12_2"
+                android:id="@+id/single_button12_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -509,7 +509,7 @@
                 android:text="button12_2"/>
 
             <Button
-                android:id="@+id/button12_3"
+                android:id="@+id/single_button12_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -530,7 +530,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button13_1"
+                android:id="@+id/single_button13_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -540,7 +540,7 @@
                 android:text="button13_1"/>
 
             <Button
-                android:id="@+id/button13_2"
+                android:id="@+id/single_button13_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -550,7 +550,7 @@
                 android:text="button13_2"/>
 
             <Button
-                android:id="@+id/button13_3"
+                android:id="@+id/single_button13_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/button_text_color_blue"
@@ -563,14 +563,14 @@
 
         <!-- クリアボタン -->
         <Button
-            android:id="@+id/clear_button"
+            android:id="@+id/clear_button_single"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textColor="@drawable/button_text_color_blue"
             android:background="@drawable/button_shape_blue"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="CLEAR"/>
+            android:text="@string/clear_str"/>
 
         <!-- 戻る・次へ -->
         <LinearLayout
@@ -582,20 +582,24 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/back"
-                android:layout_width="120dp"
+                android:id="@+id/back_for_choice_single"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="戻る"/>
+                android:text="@string/back_str"/>
 
             <Button
-                android:id="@+id/next"
-                android:layout_width="120dp"
+                android:id="@+id/next_for_choice_single"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="次へ"/>
+                android:text="@string/next_str"/>
 
         </LinearLayout>
 

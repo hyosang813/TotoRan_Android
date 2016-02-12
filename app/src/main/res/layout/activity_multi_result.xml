@@ -93,13 +93,13 @@
 
     <!-- 戻るボタン -->
     <Button
-        android:id="@+id/back_for_result_single"
+        android:id="@+id/back_for_result_multi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="戻る"/>
+        android:text="@string/back_str"/>
 
 
 </LinearLayout>

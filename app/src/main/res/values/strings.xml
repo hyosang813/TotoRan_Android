@@ -28,5 +28,11 @@
     <string name="puchi_str">プチ削減</string>
     <string name="hantei_str">判定表示</string>
 
+    <!-- 選択画面共通 -->
+    <string name="clear_str">CLEAR</string>
+
+    <!-- 「次へ」ボタンと「戻る」ボタン -->
+    <string name="next_str">次へ</string>
+    <string name="back_str">戻る</string>
 
 </resources>

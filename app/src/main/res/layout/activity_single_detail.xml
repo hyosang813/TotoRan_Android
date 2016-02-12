@@ -185,20 +185,24 @@
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/back"
-            android:layout_width="120dp"
+            android:id="@+id/back_for_detail_single"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="戻る"/>
+            android:text="@string/back_str"/>
 
         <Button
-            android:id="@+id/next"
-            android:layout_width="120dp"
+            android:id="@+id/next_for_detail_single"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="次へ"/>
+            android:text="@string/next_str"/>
 
     </LinearLayout>
 
