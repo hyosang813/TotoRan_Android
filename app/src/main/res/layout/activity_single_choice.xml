@@ -570,6 +570,7 @@
             android:background="@drawable/button_shape_blue"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
+            android:onClick="allClear"
             android:text="@string/clear_str"/>
 
         <!-- 戻る・次へ -->
