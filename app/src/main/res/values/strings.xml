@@ -7,6 +7,9 @@
     <string name="odds_confirm">支持率確認</string>
     <string name="data_get">データ再取得</string>
 
+    <!-- 選択画面の「DRAW」 -->
+    <string name="draw_str">DRAW</string>
+
     <!-- シングル条件指定画面 -->
     <string name="hda_title">■「ホーム、ドロー、アウェイ」の数</string>
     <string name="home_title">　・「ホーム」の数　</string>

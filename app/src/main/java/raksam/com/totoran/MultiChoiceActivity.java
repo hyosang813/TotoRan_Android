@@ -12,6 +12,9 @@ public class MultiChoiceActivity extends BaseChoiceActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_choice);
 
+        //ボタン作成メソッドを呼び出し
+        buttonMake("multi");
+
     }
 
     //「次へ」ボタン押下時はシングル条件指定画面に画面遷移

@@ -13,6 +13,8 @@ public class SingleChoiceActivity extends BaseChoiceActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_choice);
 
+        //ボタン作成メソッドを呼び出し
+        buttonMake("single");
 
     }
 

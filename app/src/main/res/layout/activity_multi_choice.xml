@@ -45,6 +45,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button1_1"/>
 
             <Button
@@ -55,6 +56,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -65,6 +67,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button1_3"/>
 
         </LinearLayout>
@@ -86,6 +89,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button2_1"/>
 
             <Button
@@ -96,6 +100,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -106,6 +111,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button2_3"/>
 
         </LinearLayout>
@@ -127,6 +133,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button3_1"/>
 
             <Button
@@ -137,6 +144,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -147,6 +155,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button3_3"/>
 
         </LinearLayout>
@@ -168,6 +177,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button4_1"/>
 
             <Button
@@ -178,6 +188,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -188,6 +199,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button4_3"/>
 
         </LinearLayout>
@@ -209,6 +221,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button5_1"/>
 
             <Button
@@ -219,6 +232,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -229,6 +243,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button5_3"/>
 
         </LinearLayout>
@@ -250,6 +265,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button6_1"/>
 
             <Button
@@ -260,6 +276,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -270,6 +287,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button6_3"/>
 
         </LinearLayout>
@@ -291,6 +309,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button7_1"/>
 
             <Button
@@ -301,6 +320,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -311,6 +331,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button7_3"/>
 
         </LinearLayout>
@@ -332,6 +353,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button8_1"/>
 
             <Button
@@ -342,6 +364,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -352,6 +375,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button8_3"/>
 
         </LinearLayout>
@@ -373,6 +397,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button9_1"/>
 
             <Button
@@ -383,6 +408,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -393,6 +419,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button9_3"/>
 
         </LinearLayout>
@@ -414,6 +441,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button10_1"/>
 
             <Button
@@ -424,6 +452,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -434,6 +463,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button10_3"/>
 
         </LinearLayout>
@@ -455,6 +485,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button11_1"/>
 
             <Button
@@ -465,6 +496,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -475,6 +507,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button11_3"/>
 
         </LinearLayout>
@@ -496,6 +529,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button12_1"/>
 
             <Button
@@ -506,6 +540,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -516,6 +551,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button12_3"/>
 
         </LinearLayout>
@@ -537,6 +573,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button13_1"/>
 
             <Button
@@ -547,6 +584,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="@string/draw_str"/>
 
             <Button
@@ -557,6 +595,7 @@
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:onClick="buttonClicked"
                 android:text="button13_3"/>
 
         </LinearLayout>
