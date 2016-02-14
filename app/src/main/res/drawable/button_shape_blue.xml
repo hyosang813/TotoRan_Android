@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-    <stroke
-        android:width="2dp"
-        android:color="#0000D0" />
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ONのときは[stroke 青][背景　青][文字色　白] -->
+    <item android:state_checked="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <stroke
+                android:width="2dp"
+                android:color="#0000D0" />
+            <solid
+                android:color="#0000D0" />
+        </shape>
+    </item>
+
+    <item android:state_checked="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <stroke
+                android:width="2dp"
+                android:color="#0000D0" />
+            <solid
+                android:color="#00000000" />
+        </shape>
+    </item>
+
+</selector>
+

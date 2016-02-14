@@ -37,38 +37,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button1_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button1_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button1_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button1_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button1_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -81,38 +80,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button2_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button2_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button2_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button2_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button2_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -125,38 +123,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button3_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button3_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button3_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button3_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button3_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -169,38 +166,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button4_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button4_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button4_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button4_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button4_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -213,38 +209,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button5_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button5_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button5_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button5_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button5_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -257,38 +252,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button6_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button6_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button6_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button6_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button6_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -301,38 +295,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button7_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button7_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button7_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button7_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button7_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -345,38 +338,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button8_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button8_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button8_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button8_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button8_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -389,38 +381,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button9_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button9_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button9_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button9_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button9_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -433,38 +424,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button10_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button10_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button10_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button10_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button10_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -477,38 +467,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button11_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button11_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button11_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button11_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button11_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -521,38 +510,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button12_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button12_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button12_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button12_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button12_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 
@@ -565,38 +553,37 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button13_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button13_1"/>
+                android:onClick="buttonClicked" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button13_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:onClick="buttonClicked"
-                android:text="@string/draw_str"/>
+                android:textOn="@string/draw_str"
+                android:textOff="@string/draw_str"/>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/multi_button13_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textColor="@drawable/button_text_color_red"
+                android:textColor="@drawable/toggle_button_text_color_red"
                 android:background="@drawable/button_shape_red"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:onClick="buttonClicked"
-                android:text="button13_3"/>
+                android:onClick="buttonClicked" />
 
         </LinearLayout>
 

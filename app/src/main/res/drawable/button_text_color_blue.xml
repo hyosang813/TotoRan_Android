@@ -6,14 +6,8 @@
         android:color="#320000D0" />
      <!--0~255の間で50くらいを１６進数変換すると32になる -->
 
-    <!-- Buttonが押されてない時は赤 -->
+    <!-- Buttonが押されてない時は青 -->
     <item android:state_pressed="false"
         android:color="#0000D0" />
-
-    <shape xmlns:android="http://schemas.android.com/apk/res/android" >
-        <stroke
-            android:width="2dp"
-            android:color="#0000D0" />
-    </shape>
 
 </selector>

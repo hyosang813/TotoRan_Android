@@ -6,6 +6,7 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ToggleButton;
 
 import java.util.List;
 
@@ -47,13 +48,17 @@ public class BaseChoiceActivity extends Activity {
                 int btnId = getResources().getIdentifier(idStr, "id", getPackageName());
 
                 //ボタンを取得
-                Button btn = (Button)findViewById(btnId);
+                ToggleButton btn = (ToggleButton)findViewById(btnId);
 
                 //ボタンのテキスト設定　※DRAWは定義済み
                 if ( j == 0) {
                     btn.setText(teamName.get(0));
+                    btn.setTextOn(teamName.get(0));
+                    btn.setTextOff(teamName.get(0));
                 } else if ( j == 2) {
                     btn.setText(teamName.get(1));
+                    btn.setTextOn(teamName.get(1));
+                    btn.setTextOff(teamName.get(1));
                 }
             }
         }
