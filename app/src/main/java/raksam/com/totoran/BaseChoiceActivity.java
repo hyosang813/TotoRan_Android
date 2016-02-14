@@ -26,7 +26,6 @@ public class BaseChoiceActivity extends Activity {
         //共通クラス取得して初期化
         common = (Common) getApplication();
 
-
         // 予め音声データを読み込む
         buttonSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0); //この定義の仕方はLolipopで非推奨になったけどminAPIレベルがJeryBeanなのでシャーない
         buttonSoundId = buttonSoundPool.load(getApplicationContext(), R.raw.kashan, 0); //各ボタンのサウンド
@@ -38,7 +37,7 @@ public class BaseChoiceActivity extends Activity {
     protected void buttonMake(String idPrefix) {
         for (int i = 0; i < 13; i++) {
             //2次元ArrayからStringArrayを取り出す（ホームチーム名とアウェイチーム名）
-            List<String> teamName = (List<String>)common.teamNameArray.get(i);
+            ArrayList<String> teamName = common.teamNameArray.get(i);
 
             for (int j = 0; j < 3; j++) {
                 //id文字列作成
@@ -66,16 +65,6 @@ public class BaseChoiceActivity extends Activity {
     public void buttonClicked(View v) {
         //既存のエフェクト音を決して音をならす
         playSounds(buttonSoundId);
-
-        //別々の処理はこのメソッドを子クラスでOverrideして音はsuperすべき
-
-        //idのプレフィックスをキーにsingleなのかmultiなのか判断
-        //判断の内容は以下
-        // 色
-        // 対応するcommonのboolean２次元配列はどれ？
-        // 枠内でマルチ選択可能かどうか？
-        // ？
-
     }
 
     //クリアボタンの挙動
@@ -105,7 +94,7 @@ public class BaseChoiceActivity extends Activity {
     //ボタンの選択状態をboolArrayにセット
     protected void setBoolArray(String part) {
         //対象のリストを判断
-        List parentBoolArray = part.equals("single") ? common.singleBoolArray : common.multiBoolArray;
+        ArrayList<ArrayList<Boolean>> parentBoolArray = part.equals("single") ? common.singleBoolArray : common.multiBoolArray;
 
         //boolArrayを一度空にする
         parentBoolArray.clear();
