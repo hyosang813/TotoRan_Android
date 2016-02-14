@@ -16,12 +16,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //commonインスタンスがなければ作る(シングルトン)
-        if (common == null) {
-            //共通クラス取得して初期化
-            common = (Common) getApplication();
-            common.init();
-        }
+        //起動後は共通クラスを初期化
+        common = (Common) getApplication();
+        common.init();
+
         
     }
 

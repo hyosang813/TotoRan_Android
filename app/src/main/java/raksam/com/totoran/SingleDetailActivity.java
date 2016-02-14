@@ -7,10 +7,17 @@ import android.view.View;
 
 public class SingleDetailActivity extends Activity {
 
+    //共通クラスの取得
+    protected Common common; // グローバル変数を扱うクラス
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_detail);
+
+        //共通クラス取得
+        common = (Common) getApplication();
+
     }
 
     //「次へ」ボタン押下時はシングル結果画面に画面遷移

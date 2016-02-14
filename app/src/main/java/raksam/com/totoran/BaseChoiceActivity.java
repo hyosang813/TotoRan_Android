@@ -23,11 +23,9 @@ public class BaseChoiceActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //commonインスタンスがなければ作る(シングルトン)
-        if (common == null) {
-            //共通クラス取得
-            common = (Common) getApplication();
-        }
+        //共通クラス取得して初期化
+        common = (Common) getApplication();
+
 
         // 予め音声データを読み込む
         buttonSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0); //この定義の仕方はLolipopで非推奨になったけどminAPIレベルがJeryBeanなのでシャーない
