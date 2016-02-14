@@ -6,11 +6,16 @@ package raksam.com.totoran;
 
 import android.app.Application;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Common extends Application {
 
+    /**
+     * これもArrayListで明示化しよう
+     * テストデータだとエラーが出るからちょっと面倒だから今はそのまま
+     */
     //ホーム、アウェイのチーム名２次元Array
     List teamNameArray = Arrays.asList(
             Arrays.asList("広　島","川　崎"),
@@ -27,13 +32,15 @@ public class Common extends Application {
             Arrays.asList("町　田","Ｃ大阪"),
             Arrays.asList("京　都","水　戸")
             ); //テストデータだよーん！！！！！！！！！！！
-        
 
 
+    ArrayList singleBoolArray; // = new ArrayList();//シングルのボタンBOOL２次元Array
+    ArrayList multiBoolArray; // = new ArrayList(); //マルチのボタンBOOL２次元Array
 
     //初期化
     public void init(){
-
+        singleBoolArray = new ArrayList();
+        multiBoolArray = new ArrayList();
     }
 
 }

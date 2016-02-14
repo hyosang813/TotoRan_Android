@@ -30,7 +30,7 @@ public class SingleChoiceActivity extends BaseChoiceActivity {
         int vId = v.getId();
 
         //トグルボタンのIDの文字列を取得(最後の一文字だけ取っ払う)
-        String btnIdStr = getApplicationContext().getResources().getResourceEntryName(vId).substring(0, 15);
+        String btnIdStr = getApplicationContext().getResources().getResourceEntryName(vId).substring(0, 16);
 
         //自分以外の他２つを非選択状態にする
         for (int i = 1; i < 4; i++) {
@@ -48,6 +48,10 @@ public class SingleChoiceActivity extends BaseChoiceActivity {
 
     //「次へ」ボタン押下時はシングル条件指定画面に画面遷移
     public void singleResultTransition(View v) {
+        //ボタンのbool状態をcommonに格納する共通メソッドコール
+        setBoolArray("single");
+
+        //画面遷移
         startActivity(new Intent(SingleChoiceActivity.this, SingleDetailActivity.class));
     }
 }

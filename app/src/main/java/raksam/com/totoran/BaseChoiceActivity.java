@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ToggleButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BaseChoiceActivity extends Activity {
@@ -16,7 +17,7 @@ public class BaseChoiceActivity extends Activity {
     private int buttonSoundId, clearSoundId;
 
     //共通クラスの取得
-    private Common common; // グローバル変数を扱うクラス
+    protected Common common; // グローバル変数を扱うクラス
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class BaseChoiceActivity extends Activity {
 
             for (int j = 0; j < 3; j++) {
                 //id文字列作成
-                String idStr = idPrefix + "_button" + String.valueOf(i + 1) + "_" + String.valueOf(j + 1);
+                String idStr = idPrefix + "_button" + String.format("%02d", i + 1) + "_" + String.valueOf(j + 1);
                 int btnId = getResources().getIdentifier(idStr, "id", getPackageName());
 
                 //ボタンを取得
@@ -91,7 +92,7 @@ public class BaseChoiceActivity extends Activity {
         for (int i = 0; i < 13; i++) {
             for (int j = 0; j < 3; j++) {
                 //id文字列作成
-                String idStr = idPrefix + "_button" + String.valueOf(i + 1) + "_" + String.valueOf(j + 1);
+                String idStr = idPrefix + "_button" + String.format("%02d", i + 1) + "_" + String.valueOf(j + 1);
                 int btnId = getResources().getIdentifier(idStr, "id", getPackageName());
 
                 //ボタンを取得
@@ -100,6 +101,33 @@ public class BaseChoiceActivity extends Activity {
                 //ボタンのチェック状態をクリア
                 btn.setChecked(false);
             }
+        }
+    }
+
+    //ボタンの選択状態をboolArrayにセット
+    protected void setBoolArray(String part) {
+        //対象のリストを判断
+        List parentBoolArray = part.equals("single") ? common.singleBoolArray : common.multiBoolArray;
+
+        //boolArrayを一度空にする
+        parentBoolArray.clear();
+
+        //トグルボタンの選択状態をboolArrayにセット
+        for (int i = 0; i < 13; i++) {
+            //二次元目のBoolArray作成
+            ArrayList<Boolean> childBoolArray = new ArrayList<>();
+
+            for (int j = 0; j < 3; j++) {
+                //id文字列作成
+                String idStr = part + "_button" + String.format("%02d", i + 1) + "_" + String.valueOf(j + 1);
+                int btnId = getResources().getIdentifier(idStr, "id", getPackageName());
+
+                //ボタンを取得して選択状態を格納
+                ToggleButton btn = (ToggleButton) findViewById(btnId);
+                childBoolArray.add(Boolean.valueOf(btn.isChecked()));
+            }
+            //親のArrayにセット
+            parentBoolArray.add(childBoolArray);
         }
     }
 

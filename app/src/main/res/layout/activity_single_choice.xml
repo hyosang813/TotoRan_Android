@@ -38,7 +38,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button1_1"
+                android:id="@+id/single_button01_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -48,7 +48,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button1_2"
+                android:id="@+id/single_button01_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -60,7 +60,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button1_3"
+                android:id="@+id/single_button01_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -81,7 +81,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button2_1"
+                android:id="@+id/single_button02_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -91,7 +91,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button2_2"
+                android:id="@+id/single_button02_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -103,7 +103,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button2_3"
+                android:id="@+id/single_button02_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -124,7 +124,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button3_1"
+                android:id="@+id/single_button03_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -134,7 +134,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button3_2"
+                android:id="@+id/single_button03_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -146,7 +146,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button3_3"
+                android:id="@+id/single_button03_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -167,7 +167,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button4_1"
+                android:id="@+id/single_button04_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -177,7 +177,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button4_2"
+                android:id="@+id/single_button04_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -189,7 +189,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button4_3"
+                android:id="@+id/single_button04_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -210,7 +210,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button5_1"
+                android:id="@+id/single_button05_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -220,7 +220,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button5_2"
+                android:id="@+id/single_button05_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -232,7 +232,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button5_3"
+                android:id="@+id/single_button05_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -253,7 +253,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button6_1"
+                android:id="@+id/single_button06_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -263,7 +263,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button6_2"
+                android:id="@+id/single_button06_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -275,7 +275,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button6_3"
+                android:id="@+id/single_button06_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -296,7 +296,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button7_1"
+                android:id="@+id/single_button07_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -306,7 +306,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button7_2"
+                android:id="@+id/single_button07_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -318,7 +318,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button7_3"
+                android:id="@+id/single_button07_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -339,7 +339,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button8_1"
+                android:id="@+id/single_button08_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -349,7 +349,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button8_2"
+                android:id="@+id/single_button08_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -361,7 +361,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button8_3"
+                android:id="@+id/single_button08_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -382,7 +382,7 @@
             android:gravity="center">
 
             <ToggleButton
-                android:id="@+id/single_button9_1"
+                android:id="@+id/single_button09_1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -392,7 +392,7 @@
                 android:onClick="buttonClicked"/>
 
             <ToggleButton
-                android:id="@+id/single_button9_2"
+                android:id="@+id/single_button09_2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"
@@ -404,7 +404,7 @@
                 android:textOff="@string/draw_str"/>
 
             <ToggleButton
-                android:id="@+id/single_button9_3"
+                android:id="@+id/single_button09_3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textColor="@drawable/toggle_button_text_color_blue"

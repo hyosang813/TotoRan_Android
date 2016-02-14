@@ -8,10 +8,21 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 
+    //共通クラスの取得
+    protected Common common; // グローバル変数を扱うクラス
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //commonインスタンスがなければ作る(シングルトン)
+        if (common == null) {
+            //共通クラス取得して初期化
+            common = (Common) getApplication();
+            common.init();
+        }
+        
     }
 
     //「シングル」ボタン押下時はシングル選択画面に画面遷移
