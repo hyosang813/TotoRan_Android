@@ -11,6 +11,7 @@ import java.util.List;
 
 public class Common extends Application {
 
+    //ホーム、アウェイのチーム名２次元Array
     List teamNameArray = Arrays.asList(
             Arrays.asList("広　島","川　崎"),
             Arrays.asList("鳥　栖","福　岡"),
@@ -25,7 +26,8 @@ public class Common extends Application {
             Arrays.asList("熊　本","山　雅"),
             Arrays.asList("町　田","Ｃ大阪"),
             Arrays.asList("京　都","水　戸")
-            ); //ホームチーム名とアウェイチーム名で１セット、計１３セットのString二次元Array テストデータだよーん！！！！！！！！！！！
+            ); //テストデータだよーん！！！！！！！！！！！
+        
 
 
 
