@@ -111,7 +111,7 @@ public class BaseChoiceActivity extends Activity {
 
                 //ボタンを取得して選択状態を格納
                 ToggleButton btn = (ToggleButton) findViewById(btnId);
-                childBoolArray.add(Boolean.valueOf(btn.isChecked()));
+                childBoolArray.add(btn.isChecked());
             }
             //親のArrayにセット
             parentBoolArray.add(childBoolArray);
