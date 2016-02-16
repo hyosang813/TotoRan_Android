@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
  */
 public class PickerDialogFragment extends DialogFragment {
 
-    @Override
+    @Override @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         //渡される最小値、最大値、現在値データの取得
         final ArrayList<Integer> minMaxCurValArray = getArguments().getIntegerArrayList("minMaxCurValArray");
@@ -26,10 +27,11 @@ public class PickerDialogFragment extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View pickerLayout = inflater.inflate(R.layout.numberpicker_layout, null, false);
         final NumberPicker np = (NumberPicker) pickerLayout.findViewById(R.id.numberpicker);
-        np.setMinValue(minMaxCurValArray.get(0));
-        np.setMaxValue(minMaxCurValArray.get(1));
-        np.setValue(minMaxCurValArray.get(2));
-
+        if (minMaxCurValArray != null) {
+            np.setMinValue(minMaxCurValArray.get(0));
+            np.setMaxValue(minMaxCurValArray.get(1));
+            np.setValue(minMaxCurValArray.get(2));
+        }
         //アラート作成
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("数字を選択してください");
@@ -40,9 +42,11 @@ public class PickerDialogFragment extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //設定値をArrayに反映してダイアログを閉じてTextViewの更新
-                        minMaxCurValArray.set(2, np.getValue());
-                        SingleDetailActivity activity = (SingleDetailActivity) getActivity();
-                        activity.okClick();
+                        if (minMaxCurValArray != null) {
+                            minMaxCurValArray.set(2, np.getValue());
+                            SingleDetailActivity activity = (SingleDetailActivity) getActivity();
+                            activity.okClick();
+                        }
                     }
                 });
         builder.setView(pickerLayout);
