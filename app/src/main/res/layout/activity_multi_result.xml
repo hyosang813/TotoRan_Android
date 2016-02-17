@@ -49,7 +49,7 @@
 
         <!-- プチ削減ボタン -->
         <Button
-            android:id="@+id/puchi_button_multi"
+            android:id="@+id/multi_puchi_button"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:gravity="center"
@@ -63,7 +63,7 @@
 
         <!-- 判定ボタン -->
         <Button
-            android:id="@+id/hantei_button_multi"
+            android:id="@+id/multi_hantei_button"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:gravity="center"
@@ -77,7 +77,7 @@
 
         <!-- コピーボタン -->
         <Button
-            android:id="@+id/copy_button_multi"
+            android:id="@+id/multi_copy_button"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:gravity="center"
@@ -93,7 +93,7 @@
 
     <!-- 戻るボタン -->
     <Button
-        android:id="@+id/back_for_result_multi"
+        android:id="@+id/multi_back_for_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

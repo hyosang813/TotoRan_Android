@@ -101,7 +101,7 @@
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/back_for_detail_multi"
+            android:id="@+id/multi_back_for_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -112,7 +112,7 @@
             android:text="@string/back_str"/>
 
         <Button
-            android:id="@+id/next_for_detail_multi"
+            android:id="@+id/multi_next_for_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
