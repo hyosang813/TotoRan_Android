@@ -1,7 +1,5 @@
 package raksam.com.totoran;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 /**
@@ -21,7 +19,7 @@ public class DetailUseDataMaker {
     }
 
     //シングルに必要なピッカー選択値(連番)を返す
-    //ホームの選択値、ドローの選択値、アウェイの選択値、口数の選択値を格納した２次元配列(minValueとmaxValueの２値)
+    //ホームの選択値、ドローの選択値、アウェイの選択値、口数の選択値を格納した２次元配列(minValueとmaxValueとcurrentValueの3値)
     protected ArrayList<ArrayList<Integer>> singlePickDataMake() {
         //返すArrayListを生成
         ArrayList<ArrayList<Integer>> returnSingleArray = new ArrayList<>();
@@ -72,6 +70,41 @@ public class DetailUseDataMaker {
 
         //返す
         return returnSingleArray;
+    }
+
+    //マルチに必要なピッカー選択値(連番)を返す
+    //ダブルの選択数、トリプルの選択数を格納した２次元配列(minValueとmaxValueとcurrentValueの3値)
+    protected ArrayList<ArrayList<Integer>> multiPickDataMake() {
+        //返すArrayListを生成
+        ArrayList<ArrayList<Integer>> returnMultiArray = new ArrayList<>();
+
+        //それぞれのminValue一時格納変数
+        int doubleCheckCount = 0;
+        int tripleCheckCount = 0;
+
+
+        for (ArrayList<Boolean> wakuBoolArray : rawArray) {
+            int trueCount = 0;
+            for (boolean boolValue : wakuBoolArray) {
+                if (boolValue) trueCount++;
+            }
+            switch (trueCount) {
+                case 2:
+                    doubleCheckCount++;
+                    break;
+                case 3:
+                    tripleCheckCount++;
+                    break;
+                default:break;
+            }
+        }
+
+        //minとmaxのArray生成
+        returnMultiArray.add(minMaxArrayMake(doubleCheckCount, 8));
+        returnMultiArray.add(minMaxArrayMake(tripleCheckCount, 5));
+
+        //返す
+        return returnMultiArray;
     }
 
 

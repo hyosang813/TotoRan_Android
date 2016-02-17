@@ -56,7 +56,8 @@
             android:layout_marginRight="10dp"
             android:text="0"
             android:textSize="15sp"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:onClick="showPicker"/>
 
     </LinearLayout>
 
@@ -85,7 +86,8 @@
             android:layout_marginRight="10dp"
             android:text="0"
             android:textSize="15sp"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:onClick="showPicker"/>
 
     </LinearLayout>
 

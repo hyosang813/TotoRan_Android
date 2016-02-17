@@ -22,12 +22,14 @@ public class PickerDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         //渡される最小値、最大値、現在値データの取得
         final ArrayList<Integer> minMaxCurValArray = getArguments().getIntegerArrayList("minMaxCurValArray");
+        final String sinOrMul = getArguments().getString("Single_or_Multi");
 
         //ナンバーピッカーの設置
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View pickerLayout = inflater.inflate(R.layout.numberpicker_layout, null, false);
         final NumberPicker np = (NumberPicker) pickerLayout.findViewById(R.id.numberpicker);
         if (minMaxCurValArray != null) {
+            np.setWrapSelectorWheel(false);
             np.setMinValue(minMaxCurValArray.get(0));
             np.setMaxValue(minMaxCurValArray.get(1));
             np.setValue(minMaxCurValArray.get(2));
@@ -44,8 +46,13 @@ public class PickerDialogFragment extends DialogFragment {
                         //設定値をArrayに反映してダイアログを閉じてTextViewの更新
                         if (minMaxCurValArray != null) {
                             minMaxCurValArray.set(2, np.getValue());
-                            SingleDetailActivity activity = (SingleDetailActivity) getActivity();
-                            activity.okClick();
+                            if (sinOrMul != null) {
+                                if (sinOrMul.equals("Single")) {
+                                    ((SingleDetailActivity)getActivity()).okClick();
+                                } else {
+                                    ((MultiDetailActivity)getActivity()).okClick();
+                                }
+                            }
                         }
                     }
                 });
