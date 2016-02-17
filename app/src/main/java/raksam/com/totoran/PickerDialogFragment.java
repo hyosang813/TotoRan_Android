@@ -1,5 +1,6 @@
 package raksam.com.totoran;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -22,7 +23,6 @@ public class PickerDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         //渡される最小値、最大値、現在値データの取得
         final ArrayList<Integer> minMaxCurValArray = getArguments().getIntegerArrayList("minMaxCurValArray");
-        final String sinOrMul = getArguments().getString("Single_or_Multi");
 
         //ナンバーピッカーの設置
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -46,12 +46,11 @@ public class PickerDialogFragment extends DialogFragment {
                         //設定値をArrayに反映してダイアログを閉じてTextViewの更新
                         if (minMaxCurValArray != null) {
                             minMaxCurValArray.set(2, np.getValue());
-                            if (sinOrMul != null) {
-                                if (sinOrMul.equals("Single")) {
-                                    ((SingleDetailActivity)getActivity()).okClick();
-                                } else {
-                                    ((MultiDetailActivity)getActivity()).okClick();
-                                }
+                            Activity targetActivity = getActivity();
+                            if (targetActivity instanceof SingleDetailActivity) {
+                                ((SingleDetailActivity)targetActivity).okClick();
+                            } else {
+                                ((MultiDetailActivity)targetActivity).okClick();
                             }
                         }
                     }

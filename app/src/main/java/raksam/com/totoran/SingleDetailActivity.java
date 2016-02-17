@@ -75,7 +75,6 @@ public class SingleDetailActivity extends FragmentActivity {
         PickerDialogFragment dialog = new PickerDialogFragment();
         Bundle args = new Bundle();
         args.putIntegerArrayList("minMaxCurValArray", pickerArray.get(targetId));
-        args.putString("Single_or_Multi","Single");
         dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "dialog");
     }
