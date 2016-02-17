@@ -54,7 +54,18 @@ public class BackAlertDialogFragment extends DialogFragment {
             ((SingleChoiceActivity)targetActivity).back(yesNo);
         } else if (targetActivity instanceof MultiChoiceActivity) {
             ((MultiChoiceActivity)targetActivity).back(yesNo);
+        } else if (targetActivity instanceof SingleResultActivity) {
+            ((SingleResultActivity) targetActivity).back(yesNo);
+        } else if (targetActivity instanceof MultiResultActivity) {
+            ((MultiResultActivity) targetActivity).back(yesNo);
         }
+        /**
+         * 「戻る」ボタン押下時にチェックが必要なのは以下の４画面
+         *  SingleChoiceActivity
+         *  MultiChoiceActivity
+         *  SingleResultActivity
+         *  MultiResultActivity
+         */
 
     }
 }
