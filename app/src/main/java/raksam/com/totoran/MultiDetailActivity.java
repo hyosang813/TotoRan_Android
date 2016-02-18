@@ -25,6 +25,9 @@ public class MultiDetailActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_detail);
 
+        //共通クラス取得
+        common = (Common) getApplication();
+
         //前の画面からピッカー用Arrayを受け取る
         Intent intent = getIntent();
         pickerArray = (ArrayList<ArrayList<Integer>>)intent.getSerializableExtra("pickerArrayData");
@@ -55,9 +58,9 @@ public class MultiDetailActivity extends FragmentActivity {
             return;
         }
 
-        //マルチ条件指定画面に画面遷移
+        //マルチ結果表示画面に画面遷移
         Intent intent = new Intent(getApplication(), MultiResultActivity.class);
-        intent.putExtra("pickerArrayData", pickerArray);
+        intent.putExtra("randomStringArrayData", RandomLogic.multiRandomDataMake(common.multiBoolArray, pickerArray)); //ランダムロジックをかましたString二次元Array
         startActivity(intent);
     }
 

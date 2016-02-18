@@ -57,8 +57,9 @@ public class SingleDetailActivity extends FragmentActivity {
             ArrayList<ArrayList<String>> singleRandomResultArray = RandomLogic.singleRandomDataMake(common.singleBoolArray, pickerArray);
 
 
-            //オーケー(結果：0なら画面遷移)
-            startActivity(new Intent(SingleDetailActivity.this, SingleResultActivity.class));
+            //マルチ結果表示画面に画面遷移
+            Intent intent = new Intent(getApplication(), SingleResultActivity.class);
+            startActivity(intent);
         } else {
             String warnMessage = "";
             switch (checkResult) {

@@ -1,5 +1,6 @@
 package raksam.com.totoran;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,19 +11,53 @@ import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MultiResultActivity extends FragmentActivity {
+
+    private static final int BASE_COUNT = 13;
+
+    //共通クラスの取得
+    protected Common common; // グローバル変数を扱うクラス
 
     //判定結果表示ポップアップWindow
     private PopupWindow popHanteiWindow;
+
+    //ランダムロジックをかました文字列二次元Array
+    private ArrayList<ArrayList<String>> randomStrArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_result);
 
+        //共通クラス取得
+        common = (Common) getApplication();
+
+        //前の画面からピッカー用Arrayを受け取る
+        Intent intent = getIntent();
+        randomStrArray = (ArrayList<ArrayList<String>>)intent.getSerializableExtra("randomStringArrayData");
+
         //等幅フォント(MONOSPACE)の指定
         TextView tv = (TextView)findViewById(R.id.result_text_view_multi);
         tv.setTypeface(Typeface.MONOSPACE);
+
+        //チーム情報とランダム情報をがっちゃんこして表示
+        for (int i = 0; i < BASE_COUNT; i++) {
+            //「01 ホーム - アウェイ [102]」の形式
+            tv.setText(tv.getText() +
+                    String.format("%02d", i + 1) +
+                    " " +
+                    common.teamNameArray.get(i).get(0) +
+                    " - " +
+                    common.teamNameArray.get(i).get(1) +
+                    " [" +
+                    randomStrArray.get(i).get(0) +
+                    randomStrArray.get(i).get(1) +
+                    randomStrArray.get(i).get(2) +
+                    "]\n"
+            );
+        }
     }
 
     //戻るボタン押下
