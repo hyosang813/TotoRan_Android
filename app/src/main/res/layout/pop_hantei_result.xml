@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFF00"
+    android:orientation="vertical"
+    android:gravity="top">
+
+    <!-- 結果表示領域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/pop_hantei_result_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="500"
+            android:background="@drawable/pick_value_shape"
+            android:gravity="top|left"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="11111 11011 121 B[25] a[44]\n11201 21210 012 C[8] c[5]\n01111 02112 110 D[1] d[2]\n21112 12211 112 E[0.3] e[0.2]\n21111 20122 111 E[0.2] e[0.2]\n22222 21222 222 E[0.1] e[0.03]\n10010 10100 001 E[0.05] e[0.3]\n12112 10101 010 E[0.05] e[0.2]\n01122 11121 210 F[0.002] e[0.04]\n00000 00000 000 F[0.001] e[0.02]\n11111 11011 121 B[25] a[44]\n11201 21210 012 C[8] c[5]\n01111 02112 110 D[1] d[2]\n21112 12211 112 E[0.3] e[0.2]\n21111 20122 111 E[0.2] e[0.2]\n22222 21222 222 E[0.1] e[0.03]\n10010 10100 001 E[0.05] e[0.3]\n12112 10101 010 E[0.05] e[0.2]\n01122 11121 210 F[0.002] e[0.04]\n00000 00000 000 F[0.001] e[0.02]\n11111 11011 121 B[25] a[44]\n11201 21210 012 C[8] c[5]\n01111 02112 110 D[1] d[2]\n21112 12211 112 E[0.3] e[0.2]\n21111 20122 111 E[0.2] e[0.2]\n22222 21222 222 E[0.1] e[0.03]\n10010 10100 001 E[0.05] e[0.3]\n12112 10101 010 E[0.05] e[0.2]\n01122 11121 210 F[0.002] e[0.04]\n00000 00000 000 F[0.001] e[0.02]\n11111 11011 121 B[25] a[44]\n11201 21210 012 C[8] c[5]\n01111 02112 110 D[1] d[2]\n21112 12211 112 E[0.3] e[0.2]\n21111 20122 111 E[0.2] e[0.2]\n22222 21222 222 E[0.1] e[0.03]\n10010 10100 001 E[0.05] e[0.3]\n12112 10101 010 E[0.05] e[0.2]\n01122 11121 210 F[0.002] e[0.04]\n00000 00000 000 F[0.001] e[0.02]"
+            android:textSize="16sp" />
+
+    </ScrollView>
+
+    <!-- コピーボタン -->
+    <Button
+        android:id="@+id/pop_hantei_copy_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/button_shape_nomal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="@string/copy_str" />
+
+</LinearLayout>

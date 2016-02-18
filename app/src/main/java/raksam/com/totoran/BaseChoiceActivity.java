@@ -150,7 +150,7 @@ public class BaseChoiceActivity extends FragmentActivity {
                     dialog.setArguments(args);
                     dialog.show(getSupportFragmentManager(), "dialog");
                     checkedContain = true;
-                    break;
+                    return;
                 }
             }
         }

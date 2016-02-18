@@ -21,18 +21,14 @@ public class MultiDetailActivity extends FragmentActivity {
     int[] targatTextViews = {R.id.double_unit, R.id.triple_unit};
 
     @Override
+    @SuppressWarnings("unchecked") //intent.getSerializableExtraでwarningが出ちゃうの消すアノテーション。。。よくはないよね。。。
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_detail);
 
-        //共通クラス取得
-        common = (Common) getApplication();
-
-        //ピッカーで使用するデータロジッククラス
-        DetailUseDataMaker dataMaker = new DetailUseDataMaker(common.multiBoolArray);
-
-        //ピッカー用のデータ取得
-        pickerArray = dataMaker.multiPickDataMake();
+        //前の画面からピッカー用Arrayを受け取る
+        Intent intent = getIntent();
+        pickerArray = (ArrayList<ArrayList<Integer>>)intent.getSerializableExtra("pickerArrayData");
 
         //ホーム、ドロー、アウェイの数の初期値をTextViewにセット
         for (int i = 0; i < targatTextViews.length; i++) {
@@ -49,7 +45,21 @@ public class MultiDetailActivity extends FragmentActivity {
 
     //「次へ」ボタン押下時はマルチ結果画面に画面遷移
     public void multiResultTransition(View v) {
-        startActivity(new Intent(MultiDetailActivity.this, MultiResultActivity.class));
+        //チェックに引っかかった場合はアラート表示して画面遷移中止
+        if (DoubleTripleCheck.dtCheck(pickerArray)) {
+            OkAlertDialogFragment dialog = new OkAlertDialogFragment();
+            Bundle args = new Bundle();
+            args.putString("title", "警告");
+            args.putString("message", "以下の組合わせを超える事は出来ません\n※合計486口を超える事はできません\nダブル:1 トリプル:5\nダブル:2 トリプル:4\nダブル:3 トリプル:3\nダブル:4 トリプル:3\nダブル:5 トリプル:2\nダブル:6 トリプル:1\nダブル:7 トリプル:1\nダブル:8 トリプル:0");
+            dialog.setArguments(args);
+            dialog.show(getSupportFragmentManager(), "dialog");
+            return;
+        }
+
+        //マルチ条件指定画面に画面遷移
+        Intent intent = new Intent(getApplication(), MultiResultActivity.class);
+        intent.putExtra("pickerArrayData", pickerArray);
+        startActivity(intent);
     }
 
     //マルチ選択画面に戻る

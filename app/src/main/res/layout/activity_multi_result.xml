@@ -59,6 +59,7 @@
             android:layout_marginRight="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:onClick="popSakugen"
             android:text="@string/puchi_str"/>
 
         <!-- 判定ボタン -->
@@ -73,6 +74,7 @@
             android:layout_marginRight="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:onClick="popHantei"
             android:text="@string/hantei_str"/>
 
         <!-- コピーボタン -->
@@ -87,6 +89,7 @@
             android:layout_marginRight="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
+            android:onClick="popCopy"
             android:text="@string/copy_str"/>
 
     </LinearLayout>
