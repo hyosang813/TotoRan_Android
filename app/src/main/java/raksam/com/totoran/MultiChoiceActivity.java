@@ -3,7 +3,6 @@ package raksam.com.totoran;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -32,7 +31,7 @@ public class MultiChoiceActivity extends BaseChoiceActivity {
         ArrayList<ArrayList<Integer>> wtCheckArray = dataMaker.multiPickDataMake();
 
         //チェックに引っかかった場合はアラート表示して画面遷移中止
-        if (DoubleTripleCheck.dtCheck(wtCheckArray)) {
+        if (ConsistencyCheck.doubleTripleCheck(wtCheckArray)) {
             OkAlertDialogFragment dialog = new OkAlertDialogFragment();
             Bundle args = new Bundle();
             args.putString("title", "警告");

@@ -3,7 +3,6 @@ package raksam.com.totoran;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -46,7 +45,7 @@ public class MultiDetailActivity extends FragmentActivity {
     //「次へ」ボタン押下時はマルチ結果画面に画面遷移
     public void multiResultTransition(View v) {
         //チェックに引っかかった場合はアラート表示して画面遷移中止
-        if (DoubleTripleCheck.dtCheck(pickerArray)) {
+        if (ConsistencyCheck.doubleTripleCheck(pickerArray)) {
             OkAlertDialogFragment dialog = new OkAlertDialogFragment();
             Bundle args = new Bundle();
             args.putString("title", "警告");

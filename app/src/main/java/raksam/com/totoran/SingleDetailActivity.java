@@ -49,7 +49,40 @@ public class SingleDetailActivity extends FragmentActivity {
 
     //「次へ」ボタン押下時はシングル結果画面に画面遷移
     public void singleResultTransition(View v) {
-        startActivity(new Intent(SingleDetailActivity.this, SingleResultActivity.class));
+        //整合性チェック
+        int checkResult = ConsistencyCheck.singleConsistencyCheck(pickerArray);
+
+        if (checkResult == 0) {
+            //シングルランダムロジックをかます
+            ArrayList<ArrayList<String>> singleRandomResultArray = RandomLogic.singleRandomDataMake(common.singleBoolArray, pickerArray);
+
+
+            //オーケー(結果：0なら画面遷移)
+            startActivity(new Intent(SingleDetailActivity.this, SingleResultActivity.class));
+        } else {
+            String warnMessage = "";
+            switch (checkResult) {
+                case 1:
+                    warnMessage = "選択された合計数が「１３試合」を超えてます";
+                    break;
+                case 2:
+                    warnMessage = "選択された合計数が「１３試合」の場合の口数は１口までです";
+                    break;
+                case 3:
+                    warnMessage = "選択された合計数が「１２試合」の場合の口数は３口までです";
+                    break;
+                case 4:
+                    warnMessage = "選択された合計数が「１１試合」の場合の口数は９口までです";
+                    break;
+            }
+            //警告メッセージ表示
+            OkAlertDialogFragment dialog = new OkAlertDialogFragment();
+            Bundle args = new Bundle();
+            args.putString("title", "警告");
+            args.putString("message", warnMessage);
+            dialog.setArguments(args);
+            dialog.show(getSupportFragmentManager(), "dialog");
+        }
     }
 
     //シングル選択画面に戻る
