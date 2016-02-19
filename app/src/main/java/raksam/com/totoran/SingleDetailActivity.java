@@ -59,10 +59,11 @@ public class SingleDetailActivity extends FragmentActivity {
             //判定ロジックをかます
             ArrayList<ArrayList<String>> singleHanteiResultArray = HanteiLogic.hanteiDataMake(singleRandomResultArray, common.totoRateArray, common.bookRateArray);
 
-
-            //マルチ結果表示画面に画面遷移
+            //シングル結果表示画面に画面遷移
             Intent intent = new Intent(getApplication(), SingleResultActivity.class);
+            intent.putExtra("hanteiStringArrayData", singleHanteiResultArray); //判定ロジックをかましたString二次元Array
             startActivity(intent);
+
         } else {
             String warnMessage = "";
             switch (checkResult) {

@@ -35,8 +35,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="11111 11011 121 B[25] a[44]\n11201 21210 012 C[8] c[5]\n01111 02112 110 D[1] d[2]\n21112 12211 112 E[0.3] e[0.2]\n21111 20122 111 E[0.2] e[0.2]\n22222 21222 222 E[0.1] e[0.03]\n10010 10100 001 E[0.05] e[0.3]\n12112 10101 010 E[0.05] e[0.2]\n01122 11121 210 F[0.002] e[0.04]\n00000 00000 000 F[0.001] e[0.02]\n\n2016年02月12日 11時56分時点"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <!-- コピーボタン -->
     <Button

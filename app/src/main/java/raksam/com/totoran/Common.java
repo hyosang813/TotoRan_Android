@@ -14,6 +14,7 @@ public class Common extends Application {
     ArrayList<ArrayList<Boolean>> multiBoolArray; //マルチのボタンBOOL２次元Array
     ArrayList<ArrayList<String>> totoRateArray; //totoのレート情報２次元Array
     ArrayList<ArrayList<String>> bookRateArray; //bookのレート情報２次元Array
+    String jitenStr = "2016年02月12日 11時56分時点";
 
     //初期化
     public void init(){

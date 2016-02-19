@@ -34,7 +34,7 @@ public class MultiResultActivity extends FragmentActivity {
         //共通クラス取得
         common = (Common) getApplication();
 
-        //前の画面からピッカー用Arrayを受け取る
+        //前の画面からランダム結果Arrayを受け取る
         Intent intent = getIntent();
         randomStrArray = (ArrayList<ArrayList<String>>)intent.getSerializableExtra("randomStringArrayData");
 
@@ -42,11 +42,13 @@ public class MultiResultActivity extends FragmentActivity {
         TextView tv = (TextView)findViewById(R.id.result_text_view_multi);
         tv.setTypeface(Typeface.MONOSPACE);
 
+        //最終表示用変数用意
+        String displayText = "";
+
         //チーム情報とランダム情報をがっちゃんこして表示
         for (int i = 0; i < BASE_COUNT; i++) {
             //「01 ホーム - アウェイ [102]」の形式
-            tv.setText(tv.getText() +
-                    String.format("%02d", i + 1) +
+            displayText += String.format("%02d", i + 1) +
                     " " +
                     common.teamNameArray.get(i).get(0) +
                     " - " +
@@ -55,9 +57,9 @@ public class MultiResultActivity extends FragmentActivity {
                     randomStrArray.get(i).get(0) +
                     randomStrArray.get(i).get(1) +
                     randomStrArray.get(i).get(2) +
-                    "]\n"
-            );
+                    "]\n";
         }
+        tv.setText(displayText);
     }
 
     //戻るボタン押下
