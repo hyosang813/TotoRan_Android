@@ -56,6 +56,9 @@ public class SingleDetailActivity extends FragmentActivity {
             //シングルランダムロジックをかます
             ArrayList<ArrayList<String>> singleRandomResultArray = RandomLogic.singleRandomDataMake(common.singleBoolArray, pickerArray);
 
+            //判定ロジックをかます
+            ArrayList<ArrayList<String>> singleHanteiResultArray = HanteiLogic.hanteiDataMake(singleRandomResultArray, common.totoRateArray, common.bookRateArray);
+
 
             //マルチ結果表示画面に画面遷移
             Intent intent = new Intent(getApplication(), SingleResultActivity.class);
