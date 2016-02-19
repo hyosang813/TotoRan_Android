@@ -110,13 +110,13 @@ public class HanteiLogic {
         if(rate >= D_HANTEI) {
             return "[" + String.valueOf((int)rate) + "]";
         } else {
+            //指数表示(E-とか)を避けるためにString８桁を取得
             String numStr = String.format("%f", rate).substring(0, 8);
-
             //最初に0以外の数字が出てくる位置を取得する
             int index = 2; //最初の「0.」は絶対
             while (true) {
                 if (!numStr.substring(index, index + 1).equals("0") && !numStr.substring(index, index + 1).equals(".") ) return "[" + numStr.substring(0, index + 1) + "]";
-                if (index == 5)  return "[0]"; //文字数に達しても発見できなかったらbreak;
+                if (index == 5)  return "[0]"; //文字数に達しても発見できなかったら０を返す
                 index++;
             }
         }
