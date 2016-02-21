@@ -26,6 +26,18 @@ public class MultiResultActivity extends FragmentActivity {
     //ランダムロジックをかました文字列二次元Array
     private ArrayList<ArrayList<String>> randomStrArray;
 
+    //判定対象数列
+    private ArrayList<ArrayList<String>> targetStrArray;
+
+    //判定文字列削減有無(大文字)
+    public ArrayList<ArrayList<Object>> hanteiStrUpperArray;
+
+    //判定文字列削減有無(小文字)
+    public ArrayList<ArrayList<Object>> hanteiStrLowerArray;
+
+    //ドロー削減有無
+    public ArrayList<ArrayList<Object>> drawGroupArray;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +72,16 @@ public class MultiResultActivity extends FragmentActivity {
                     "]\n";
         }
         tv.setText(displayText);
+
+        //判定用の数列生成と削減対象有無(大文字、小文字、ドロー数)の生成
+        /**
+         * 判定の数列はリターンさせるが、削減対象有無は入れ物だけ一緒に投げて参照する
+         * 上の画面表示の裏で動かすように別スレッドにすべきかな？？？
+         */
+        hanteiStrUpperArray = new ArrayList<>();
+        hanteiStrLowerArray = new ArrayList<>();
+        drawGroupArray = new ArrayList<>();
+        targetStrArray = MultiToSingleLogic.multiToSingleDataMake(randomStrArray, hanteiStrUpperArray, hanteiStrLowerArray, drawGroupArray, common.totoRateArray, common.bookRateArray);
     }
 
     //戻るボタン押下
