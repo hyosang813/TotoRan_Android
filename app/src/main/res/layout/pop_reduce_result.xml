@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFF00"
+    android:orientation="vertical"
+    android:gravity="top">
+
+    <!-- 結果表示領域 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pick_value_shape"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ドロー数選択チェックボックス群のタイトル-->
+            <TextView
+                android:id="@+id/draw_checkbox_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="@string/draw_checkbox_title_str"/>
+
+            <!-- ドローチェックボックス群 0~4 -->
+            <LinearLayout
+                android:id="@+id/draw_checkboxes_zero_for_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/zero"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/one"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/two"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/three"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/four"/>
+
+            </LinearLayout>
+
+            <!-- ドローチェックボックス群 5~9 -->
+            <LinearLayout
+                android:id="@+id/draw_checkboxes_five_for_nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/five"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/six"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/seven"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/eight"/>
+
+                <CheckBox
+                    android:id="@+id/draw_checkbox_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/nine"/>
+
+            </LinearLayout>
+            <!-- 大文字判定選択チェックボックス群のタイトル-->
+            <TextView
+                android:id="@+id/upper_checkbox_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textSize="12dp"
+                android:text="@string/upper_checkbox_title_str"/>
+
+            <!-- 大文字チェックボックス群 S~D -->
+            <LinearLayout
+                android:id="@+id/upper_checkboxes_s_for_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_s"/>
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_a"/>
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_b"/>
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_c"/>
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_d"/>
+
+            </LinearLayout>
+
+            <!-- 大文字チェックボックス群 E~F -->
+            <LinearLayout
+                android:id="@+id/upper_checkboxes_e_for_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_e"/>
+
+                <CheckBox
+                    android:id="@+id/upper_checkbox_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/upper_f"/>
+
+            </LinearLayout>
+
+            <!-- 小文字判定選択チェックボックス群のタイトル-->
+            <TextView
+                android:id="@+id/lower_checkbox_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textSize="12dp"
+                android:text="@string/lower_checkbox_title_str"/>
+
+            <!-- 小文字チェックボックス群 s~d -->
+            <LinearLayout
+                android:id="@+id/lower_checkboxes_s_for_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_s"/>
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_a"/>
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_b"/>
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_c"/>
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_d"/>
+
+            </LinearLayout>
+
+            <!-- 小文字チェックボックス群 e~f -->
+            <LinearLayout
+                android:id="@+id/lower_checkboxes_e_for_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_e"/>
+
+                <CheckBox
+                    android:id="@+id/lower_checkbox_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="@string/lower_f"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+    <!-- 全選択ボタン -->
+    <Button
+        android:id="@+id/pop_reduce_alltap_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/button_shape_nomal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="@string/all_tap" />
+
+</LinearLayout>
