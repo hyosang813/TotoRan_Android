@@ -16,6 +16,9 @@ public class HanteiStrMake {
         //１数列ずつ処理
         for (ArrayList<String> strArray : hanteiStrArray) {
             for (int i = 0; i < strArray.size(); i++) {
+                //マルチのdraw数は落とす
+                if (i == 17) break;
+
                 returnStr += strArray.get(i);
 
                 //必要な場所にスペース追加
