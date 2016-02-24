@@ -30,9 +30,6 @@ public class SingleResultActivity extends FragmentActivity {
         TextView tv = (TextView)findViewById(R.id.result_text_view_single);
         tv.setTypeface(Typeface.MONOSPACE);
 
-        //最終表示用変数用意
-        String displayText = "";
-
         //整形データをTextViewにセット
         tv.setText(HanteiStrMake.resultHanteiStr(hanteiStrArray, common.jitenStr));
     }

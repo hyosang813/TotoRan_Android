@@ -260,7 +260,7 @@ public class MultiResultActivity extends FragmentActivity {
 
     //チェックボックスのチェック状況とBoolArrayの同期
     private void checkArraySynchronism(CheckBox cb, final ArrayList<ArrayList<Object>> groupArray) {
-        //ドロー数チェックボックスのクリックリスナー
+        //チェックボックスのクリックリスナー
         cb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -283,6 +283,29 @@ public class MultiResultActivity extends FragmentActivity {
 
         // レイアウト設定
         View popupView = getLayoutInflater().inflate(R.layout.pop_hantei_result, null);
+
+        //等幅フォント(MONOSPACE)の指定
+        TextView tv = (TextView)popupView.findViewById(R.id.pop_hantei_result_view);
+        tv.setTypeface(Typeface.MONOSPACE);
+
+        //プチ削減
+        ArrayList<ArrayList<String>> reduceTargetStrArray = new ArrayList<>();
+        for (ArrayList<String> targetStr : targetStrArray) {
+            //ドロー数が対象かどうかチェック
+            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(targetStr.size() - 1)), drawGroupArray)) continue;
+            //大文字判定対象かどうかチェック
+            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(13)), hanteiStrUpperArray)) continue;
+            //小さい文字判定対象かどうかチェック
+            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(15)), hanteiStrLowerArray)) continue;
+            //対象だったら追加
+            reduceTargetStrArray.add(targetStr);
+        }
+
+        //削減の結果で処理変更
+        String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.jitenStr);
+
+        //整形データをTextViewにセット
+        tv.setText(reduceText);
 
         //コピーボタン押下時の挙動
         popupView.findViewById(R.id.pop_hantei_copy_button).setOnClickListener(new View.OnClickListener() {
@@ -310,11 +333,22 @@ public class MultiResultActivity extends FragmentActivity {
 
         //画面サイズの８割サイズでポップアップ　※たてサイズは６割
         popHanteiWindow.setWidth((int) (p.x * 0.8));
-        popHanteiWindow.setHeight((int) (p.y * 0.6));
-//        popHanteiWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+//        popHanteiWindow.setHeight((int) (p.y * 0.6));
+        popHanteiWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
 
         // 画面中央に表示
         popHanteiWindow.showAtLocation(findViewById(R.id.result_text_view_multi), Gravity.CENTER, 0, 0);
+    }
+
+    //削減対象可否判定メソッド
+    private boolean reduceTargetYesOrNo(String targetStr, ArrayList<ArrayList<Object>> targetArray) {
+        for (ArrayList<Object> numBoolArray : targetArray) {
+            if (numBoolArray.get(0).equals(targetStr)) {
+                return Boolean.valueOf(numBoolArray.get(1).toString());
+            }
+        }
+        //無いってことは設計上ありえないけど一応falseを返す
+        return false;
     }
 
     //コピーボタン押下でコピーダイアログ表示
