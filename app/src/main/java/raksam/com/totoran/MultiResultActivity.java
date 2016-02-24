@@ -218,9 +218,8 @@ public class MultiResultActivity extends FragmentActivity {
         Point p = new Point();
         display.getSize(p);
 
-        //画面サイズの８割サイズでポップアップ　※たてサイズは６割
+        //画面サイズの８割サイズでポップアップ ※縦サイズは動的
         popReduceWindow.setWidth((int) (p.x * 0.8));
-//        popReduceWindow.setHeight((int) (p.y * 0.6));
         popReduceWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
 
         // 画面中央に表示
@@ -331,10 +330,14 @@ public class MultiResultActivity extends FragmentActivity {
         Point p = new Point();
         display.getSize(p);
 
-        //画面サイズの８割サイズでポップアップ　※たてサイズは６割
+        //画面サイズの８割サイズでポップアップ ※縦サイズは２０行まで動的でそれ以上になるとマックス６割
         popHanteiWindow.setWidth((int) (p.x * 0.8));
-//        popHanteiWindow.setHeight((int) (p.y * 0.6));
-        popHanteiWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+
+        if (reduceTargetStrArray.size() >= 20) {
+            popHanteiWindow.setHeight((int) (p.y * 0.6));
+        } else {
+            popHanteiWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+        }
 
         // 画面中央に表示
         popHanteiWindow.showAtLocation(findViewById(R.id.result_text_view_multi), Gravity.CENTER, 0, 0);
