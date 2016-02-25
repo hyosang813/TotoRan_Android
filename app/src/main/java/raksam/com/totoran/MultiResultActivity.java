@@ -1,5 +1,8 @@
 package raksam.com.totoran;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Typeface;
@@ -24,9 +27,6 @@ public class MultiResultActivity extends FragmentActivity {
     //共通クラスの取得
     protected Common common; // グローバル変数を扱うクラス
 
-    //ランダムロジックをかました文字列二次元Array
-    private ArrayList<ArrayList<String>> randomStrArray;
-
     //判定対象数列
     private ArrayList<ArrayList<String>> targetStrArray;
 
@@ -39,6 +39,9 @@ public class MultiResultActivity extends FragmentActivity {
     //ドロー削減有無
     public ArrayList<ArrayList<Object>> drawGroupArray;
 
+    //最終表示用変数用意
+    private String displayText = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,14 +52,11 @@ public class MultiResultActivity extends FragmentActivity {
 
         //前の画面からランダム結果Arrayを受け取る
         Intent intent = getIntent();
-        randomStrArray = (ArrayList<ArrayList<String>>)intent.getSerializableExtra("randomStringArrayData");
+        ArrayList<ArrayList<String>> randomStrArray = (ArrayList<ArrayList<String>>)intent.getSerializableExtra("randomStringArrayData");
 
         //等幅フォント(MONOSPACE)の指定
         TextView tv = (TextView)findViewById(R.id.result_text_view_multi);
         tv.setTypeface(Typeface.MONOSPACE);
-
-        //最終表示用変数用意
-        String displayText = "";
 
         //チーム情報とランダム情報をがっちゃんこして表示
         for (int i = 0; i < BASE_COUNT; i++) {
@@ -301,7 +301,7 @@ public class MultiResultActivity extends FragmentActivity {
         }
 
         //削減の結果で処理変更
-        String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.jitenStr);
+        final String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.jitenStr);
 
         //整形データをTextViewにセット
         tv.setText(reduceText);
@@ -310,10 +310,14 @@ public class MultiResultActivity extends FragmentActivity {
         popupView.findViewById(R.id.pop_hantei_copy_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //判定データをクリップボードにコピー
+                //ランダム抽出データをクリップボードにコピー
+                ClipboardManager clipBoard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
+                // コピーするデータをエディットテキストから取得する
+                ClipData clip = ClipData.newPlainText("copied_text", reduceText + "\n#トトラン！");
 
-
+                // クリップボードに内容をコピーする
+                clipBoard.setPrimaryClip(clip);
 
                 //コピーダイアログ表示
                 copyDialogShow();
@@ -358,9 +362,13 @@ public class MultiResultActivity extends FragmentActivity {
     public void popCopy(View v) {
 
         //ランダム抽出データをクリップボードにコピー
+        ClipboardManager clipBoard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
+        // コピーするデータをエディットテキストから取得する
+        ClipData clip = ClipData.newPlainText("copied_text", displayText + "\n#トトラン！");
 
-
+        // クリップボードに内容をコピーする
+        clipBoard.setPrimaryClip(clip);
 
         //コピーダイアログ表示
         copyDialogShow();

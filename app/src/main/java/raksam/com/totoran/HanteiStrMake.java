@@ -37,7 +37,7 @@ public class HanteiStrMake {
         }
 
         //最後に改行を入れて支持率取得時点を追加
-        returnStr += "\n" + jitenStr;
+        returnStr += "\n" + jitenStr + "\n";
 
         //返す
         return returnStr;
