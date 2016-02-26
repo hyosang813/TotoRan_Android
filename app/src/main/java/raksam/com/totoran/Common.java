@@ -14,7 +14,9 @@ public class Common extends Application {
     ArrayList<ArrayList<Boolean>> multiBoolArray; //マルチのボタンBOOL２次元Array
     ArrayList<ArrayList<String>> totoRateArray; //totoのレート情報２次元Array
     ArrayList<ArrayList<String>> bookRateArray; //bookのレート情報２次元Array
-    String jitenStr = "2016年02月12日 11時56分時点";
+    String numberOfTimes; //回数
+    String deadLineTime; //締め切り年月日
+    String dataGetTime; //データ取得時間
 
     //初期化
     public void init(){
@@ -25,9 +27,9 @@ public class Common extends Application {
         bookRateArray = new ArrayList<>(); //このタイミング(MainActivityのonCreate)じゃもしかしたら遅いかも？？？
 
         //テストデータ
-        makeTestDataTeam();
-        makeTestDataToto();
-        makeTestDataBook();
+//        makeTestDataTeam();
+//        makeTestDataToto();
+//        makeTestDataBook();
 
     }
 

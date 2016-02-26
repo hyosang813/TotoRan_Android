@@ -301,7 +301,7 @@ public class MultiResultActivity extends FragmentActivity {
         }
 
         //削減の結果で処理変更
-        final String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.jitenStr);
+        final String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.dataGetTime);
 
         //整形データをTextViewにセット
         tv.setText(reduceText);

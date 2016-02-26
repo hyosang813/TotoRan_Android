@@ -20,7 +20,9 @@ public class MainActivity extends Activity {
         common = (Common) getApplication();
         common.init();
 
-        
+        //データをDBから取得
+        getDatabaseData();
+
     }
 
     //「シングル」ボタン押下時はシングル選択画面に画面遷移
@@ -33,7 +35,32 @@ public class MainActivity extends Activity {
         startActivity(new Intent(MainActivity.this, MultiChoiceActivity.class));
     }
 
+    //DBから必要情報をゲットしてcommonに格納する
+    private void getDatabaseData() {
+        //DB操作インスタンスの取得
+        GetDatabaseData dbData = new GetDatabaseData(this);
 
+        //現在開催中の回数を取得
+        common.numberOfTimes = dbData.getOpenNumberAndEndDate().get(0);
+
+        //現在開催中の締切日を取得
+        common.deadLineTime = dbData.getOpenNumberAndEndDate().get(1);
+
+        //データの取得年月日を取得
+        common.dataGetTime = dbData.getDataGetTime(common.numberOfTimes);
+
+        //チーム名情報を取得
+        common.teamNameArray = dbData.getTeamNameArray(common.numberOfTimes);
+
+        //toto支持率データの取得
+        common.totoRateArray = dbData.getRateArray(common.numberOfTimes).get(0);
+
+        //book支持率データの取得
+        common.bookRateArray = dbData.getRateArray(common.numberOfTimes).get(1);
+
+        //DB操作インスタンスの破棄
+        dbData.dbClose();
+    }
 
 
 }

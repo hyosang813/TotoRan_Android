@@ -37,7 +37,7 @@ public class SingleResultActivity extends FragmentActivity {
         tv.setTypeface(Typeface.MONOSPACE);
 
         //整形データをTextViewにセット
-        singleHanteiStr = HanteiStrMake.resultHanteiStr(hanteiStrArray, common.jitenStr);
+        singleHanteiStr = HanteiStrMake.resultHanteiStr(hanteiStrArray, common.dataGetTime);
         tv.setText(singleHanteiStr);
     }
 
