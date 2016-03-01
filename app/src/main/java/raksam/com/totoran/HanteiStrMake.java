@@ -17,7 +17,7 @@ public class HanteiStrMake {
         for (ArrayList<String> strArray : hanteiStrArray) {
             for (int i = 0; i < strArray.size(); i++) {
                 //マルチのdraw数は落とす
-                if (i == 17) break;
+                if ((strArray.size() == 18 && i == 17) || (strArray.size() == 16 && i == 15)) break; //bookない場合もある対応
 
                 returnStr += strArray.get(i);
 

@@ -220,6 +220,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="20dp"
                 android:textSize="12dp"
+                android:visibility="gone"
                 android:text="@string/lower_checkbox_title_str"/>
 
             <!-- 小文字チェックボックス群 s~d -->

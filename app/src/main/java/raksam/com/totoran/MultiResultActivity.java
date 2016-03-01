@@ -150,7 +150,11 @@ public class MultiResultActivity extends FragmentActivity {
         //大文字、小文字判定チェックボックス
         ArrayList<String> bigOrSmall = new ArrayList<>();
         bigOrSmall.add("upper");
-        bigOrSmall.add("lower");
+        if (hanteiStrLowerArray.size() > 0)  {
+            //ODDSはない可能性あり
+            bigOrSmall.add("lower");
+            popupView.findViewById(R.id.lower_checkbox_title).setVisibility(View.VISIBLE);
+        }
 
         for (String targetStr : bigOrSmall) {
             //判定結果次第で表示するチェックボックスは異なる
@@ -294,8 +298,12 @@ public class MultiResultActivity extends FragmentActivity {
             if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(targetStr.size() - 1)), drawGroupArray)) continue;
             //大文字判定対象かどうかチェック
             if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(13)), hanteiStrUpperArray)) continue;
-            //小さい文字判定対象かどうかチェック
-            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(15)), hanteiStrLowerArray)) continue;
+
+            //bODDSはない可能性あり
+            if (hanteiStrLowerArray.size() > 0) {
+                //小さい文字判定対象かどうかチェック
+                if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(15)), hanteiStrLowerArray)) continue;
+            }
             //対象だったら追加
             reduceTargetStrArray.add(targetStr);
         }

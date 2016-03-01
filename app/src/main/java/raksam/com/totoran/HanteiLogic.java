@@ -35,24 +35,21 @@ public class HanteiLogic {
         }
 
         float averageToto = 1; //基準値で割る前のtoto支持率積算用
-        float averageBook = 1; //基準値で割る前のbook支持率積算用
 
         //１数列ずつ対応していく
         for (ArrayList<String> childHDAstrArray: localHomeDrawAwayStrArray) {
             //１枠ずつ対応していく
             int wakuCount = 0;
             for (String hanteitaisyou : childHDAstrArray) {
-                //totoとbookともに各枠の支持率(＊0.01)を積算
+                //各枠の支持率(＊0.01)を積算
                 averageToto *= Float.valueOf(totoRateArray.get(wakuCount).get(Integer.valueOf(hanteitaisyou))) * PERCENT_BASE;
-                averageBook *= Float.valueOf(bookRateArray.get(wakuCount).get(Integer.valueOf(hanteitaisyou))) * PERCENT_BASE;
 
                 //枠カウンターをインクリメント
                 wakuCount++;
             }
 
-            //totoとbookの判定用数値を取得
+            //判定用数値を取得
             float rateToto = averageToto / BASE_VALUE;
-            float rateBook = averageBook / BASE_VALUE;
 
             //totoの判定文字列を末尾に追加
             childHDAstrArray.add(hanteiStrMake(rateToto).toUpperCase());
@@ -62,13 +59,39 @@ public class HanteiLogic {
             childHDAstrArray.add(hanteiNumStr);
             childHDAstrArray.add(0, hanteiNumStr.substring(1, hanteiNumStr.length() - 1)); //かっこ[]を外してから格納せにゃならんよね
 
-            //bookの判定文字列と、判定数字文字列を末尾に追加
-            childHDAstrArray.add(hanteiStrMake(rateBook));
-            childHDAstrArray.add(hanteiNumStrMake(rateBook));
-
             //支持率積算用変数の初期化
             averageToto = 1;
-            averageBook = 1;
+        }
+
+        //bODDSがあればそれも処理
+        if (bookRateArray.get(0).get(0) != null) {
+
+            float averageBook = 1; //基準値で割る前のbook支持率積算用
+
+            //１数列ずつ対応していく
+            int seqCount = 0;
+            for (ArrayList<String> childHDAstrArray: homeDrawAwayStrArray) { //totoの判定結果に左右されないために引数の元Arrayを使用する
+                //１枠ずつ対応していく
+                int wakuCount = 0;
+                for (String hanteitaisyou : childHDAstrArray) {
+                    //各枠の支持率(＊0.01)を積算
+                    averageBook *= Float.valueOf(bookRateArray.get(wakuCount).get(Integer.valueOf(hanteitaisyou))) * PERCENT_BASE;
+
+                    //枠カウンターをインクリメント
+                    wakuCount++;
+                }
+
+                //totoとbookの判定用数値を取得
+                float rateBook = averageBook / BASE_VALUE;
+
+                //bookの判定文字列と、判定数字文字列を、totoの結果末尾に追加
+                localHomeDrawAwayStrArray.get(seqCount).add(hanteiStrMake(rateBook));
+                localHomeDrawAwayStrArray.get(seqCount).add(hanteiNumStrMake(rateBook));
+                seqCount++;
+
+                //支持率積算用変数の初期化
+                averageBook = 1;
+            }
         }
 
         //データが２個以上ある場合はソートが必要

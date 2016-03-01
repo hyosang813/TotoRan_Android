@@ -68,13 +68,17 @@ public class MultiToSingleLogic {
             //ドローと大文字と小文字が存在しなかったら追加
             if (!drawStrArray.contains(drawCount)) drawStrArray.add(drawCount);
             if (!upperStrArray.contains(singleWakuArray.get(13))) upperStrArray.add(singleWakuArray.get(13));
-            if (!lowerStrArray.contains(singleWakuArray.get(15))) lowerStrArray.add(singleWakuArray.get(15));
+
+            //bookRateは存在しない可能性あり
+            if (bookRateArray.get(0).get(0) != null) {
+                if (!lowerStrArray.contains(singleWakuArray.get(15))) lowerStrArray.add(singleWakuArray.get(15));
+            }
         }
 
         //それぞれの種類をソート
         Collections.sort(drawStrArray);
         Collections.sort(upperStrArray);
-        Collections.sort(lowerStrArray);
+        Collections.sort(lowerStrArray); //bookRateは存在しない可能性ありだけど悪さはしないでしょ
 
         
         //スイッチ用にbooleanとセットにする(初期値はtrue)
@@ -92,7 +96,7 @@ public class MultiToSingleLogic {
             hanteiStrUpperArray.add(mixBoolData);
         }
 
-        for (String lowerString : lowerStrArray) {
+        for (String lowerString : lowerStrArray) { //bookRateは存在しない可能性ありだけど悪さはしないでしょ
             ArrayList<Object> mixBoolData = new ArrayList<>();
             mixBoolData.add(lowerString);
             mixBoolData.add(true);
