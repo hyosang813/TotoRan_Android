@@ -22,7 +22,7 @@ public class GetDatabaseData {
         DataBaseHelper mDbHelper = new DataBaseHelper(context);
         try {
             mDbHelper.createEmptyDataBase();
-            db = mDbHelper.openDataBase();
+            db = mDbHelper.openDataBase(); //読み取り専用モードでDBオープン
         } catch (IOException ioe) {
             throw new Error("Unable to create database");
         } catch(SQLException sqle){
@@ -175,8 +175,43 @@ public class GetDatabaseData {
             rateStrArray.add(tempBookRateStrArray);
         }
 
+        //カーソルを閉じる
+        cursor.close();
+
         //返す
         return rateStrArray;
+    }
+
+    //現在開催中の回数を返す（開催期間じゃなかったら"Non"を返す）
+    public String holdCheck() {
+        String QueryStr = "select " +
+                "open_number " +
+                "from " +
+                "kaisu " +
+                "where  " +
+                "(start_date < datetime('now', 'localtime') " +
+                "and " +
+                "end_date > datetime('now', 'localtime')) " +
+                "order by " +
+                "open_number " +
+                "limit 1 ";
+
+        //カーソルにクエリ結果を格納
+        Cursor cursor = db.rawQuery(QueryStr, null);
+
+        //結果が０件だったらNonを返す
+        String holdNum = "";
+        if(cursor.moveToFirst()) {
+            holdNum = cursor.getString(cursor.getColumnIndex("open_number"));
+        } else {
+            holdNum = "Non";
+        }
+
+        //カーソルを閉じる
+        cursor.close();
+
+        //返す
+        return holdNum;
     }
 
     //明示的にDBをクローズ

@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="raksam.com.totoran">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />　<!-- ネット接続 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 通信可能判断 -->
 
     <!-- NENDとかデータ取得とか -->
     <application

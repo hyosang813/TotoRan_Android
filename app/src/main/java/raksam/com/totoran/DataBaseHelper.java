@@ -129,6 +129,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return getReadableDatabase();
     }
 
+    public SQLiteDatabase openDataBaseWithWrite() throws SQLException {
+        return getWritableDatabase();
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
     }
