@@ -1,7 +1,6 @@
 package raksam.com.totoran;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.util.Log;
 
 import org.jsoup.Jsoup;
@@ -12,35 +11,18 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
 /**
- * Created by hyosang813 on 16/02/26.
+ * Created by hyosang813 on 16/03/02.
  * http通信で楽天totoの開催回データを取得するクラス
- * okhttpを採用
+ * 修正版
  */
-public class GetHttpConnectionDataKaisu extends AsyncTask<String, String, String> {
-    //終了通知スイッチ
-    public ArrayList<String> finishSwitch;
+public class GetKaisuTableData {
 
-    //ヘルパークラスに渡すコンテキスト
-    private Context context;
-
-    //コンストラクタ
-    public GetHttpConnectionDataKaisu(ArrayList<String> finishSwitch, Context context) {
-        this.finishSwitch = finishSwitch;
-        this.context = context;
-    }
-
-    /**
-     *バックグラウンド(メイン以外のスレッド)での処理
-     */
-    @Override
-    protected String doInBackground(String... params) {
-
+    public void getKaisuTableData(String url, Context context) {
         //htmlデータの取得
-        Document document = new Document(params[0]);
+        Document document = new Document(url);
         try {
-            document = Jsoup.connect(params[0]).get();
+            document = Jsoup.connect(url).get();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -134,17 +116,7 @@ public class GetHttpConnectionDataKaisu extends AsyncTask<String, String, String
             }
         }
 
-        this.finishSwitch.add("OK");
-        return "";
+        //DBクローズ
+        setDb.dbClose();
     }
-
-    /**
-     *バックグラウンドでの処理終了後にメインスレッドで行う処理
-     */
-//    @Override
-//    protected void onPostExecute(String s) {
-//        super.onPostExecute(s);
-//
-//    }
 }
-

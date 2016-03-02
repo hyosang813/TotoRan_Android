@@ -89,45 +89,26 @@ public class SetDatabaseData {
         return true;
     }
 
-    //組み合わせテーブル(kumiawase)にwebから取得したデータをアップデート(toto支持率)
-    public boolean updataKumiawaseTotoRate(ArrayList<String> totoRateArray, String kaisu) {
+    //組み合わせテーブル(kumiawase)にwebから取得した支持率データをアップデート
+    public boolean updataKumiawaseRate(ArrayList <ArrayList<String>> rateArray, String kaisu) {
 
         //枠ID
         int wakuCount = 1;
 
         //三つ飛ばしでホーム支持率、ドロー支持率、アウェイ支持率
-        for (int i = 0; i < totoRateArray.size(); i += 3) {
+        for (int i = 0; i < 39; i += 3) {
             ContentValues cv = new ContentValues();
             cv.put("get_date", getNowDate());
-            cv.put("home_rate", totoRateArray.get(i));
-            cv.put("draw_rate", totoRateArray.get(i + 1));
-            cv.put("away_rate", totoRateArray.get(i + 2));
+            cv.put("home_rate", rateArray.get(0).get(i));
+            cv.put("draw_rate", rateArray.get(0).get(i + 1));
+            cv.put("away_rate", rateArray.get(0).get(i + 2));
 
-            //where句の作成
-            String whereStr = "kaisu = '" + kaisu + "' and id = " + wakuCount;
-
-            //エラーだったら−1が返る
-            if (db.update("kumiawase", cv, whereStr, null) == -1) return false;
-            wakuCount++;
-        }
-
-        //問題なければtrueを返す
-        return true;
-
-    }
-
-    //組み合わせテーブル(kumiawase)にwebから取得したデータをアップデート(book支持率)
-    public boolean updataKumiawaseBookRate(ArrayList<String> bookRateArray, String kaisu) {
-
-        //枠ID
-        int wakuCount = 1;
-
-        //三つ飛ばしでホーム支持率、ドロー支持率、アウェイ支持率
-        for (int i = 0; i < bookRateArray.size(); i += 3) {
-            ContentValues cv = new ContentValues();
-            cv.put("home_rate_b", bookRateArray.get(i));
-            cv.put("draw_rate_b", bookRateArray.get(i + 1));
-            cv.put("away_rate_b", bookRateArray.get(i + 2));
+            //bookの情報があれば一緒にアップデート
+            if (rateArray.size() == 2) {
+                cv.put("home_rate_b", rateArray.get(1).get(i));
+                cv.put("draw_rate_b", rateArray.get(1).get(i + 1));
+                cv.put("away_rate_b", rateArray.get(1).get(i + 2));
+            }
 
             //where句の作成
             String whereStr = "kaisu = '" + kaisu + "' and id = " + wakuCount;

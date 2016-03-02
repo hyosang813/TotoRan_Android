@@ -1,5 +1,6 @@
 package raksam.com.totoran;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -10,6 +11,7 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 
+import java.security.cert.CertificateParsingException;
 import java.util.ArrayList;
 
 
@@ -23,6 +25,12 @@ public class MainActivity extends FragmentActivity {
 
     //問題発生時の対応メッセージ格納変数
     String issueMessage = "";
+
+    //自分自身のコンテキスト
+    Context me;
+
+    //インジケータ
+    ProgressDialog indicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,68 +49,75 @@ public class MainActivity extends FragmentActivity {
         common = (Common) getApplication();
         common.init();
 
-        //http通信全終了を知るためのスイッチ
-        ArrayList<String> finishSwitch = new ArrayList<>();
+        //自分自身のコンテキスト
+        me = this;
 
-        //チーム略名リストの取得
-//        new GetHttpConnectionDataTeamMapList(finishSwitch, this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,"http://www.geocities.jp/totorandata/");
-
-        //楽天totoの回数データの取得
-//        new GetHttpConnectionDataKaisu(finishSwitch, this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,"https://toto.rakuten.co.jp/toto/schedule/");
-
-        /**
-         * 上記の取得処理(DB格納)が完了してないと、以下の処理はやっちゃダメ
-         * コールバック処理が必要かな？？
-         */
-        //現在が開催期間であればtotoとbookの支持率データ取得
-        GetDatabaseData gdb = new GetDatabaseData(this);
-        String holdNumber = gdb.holdCheck();
-        if(!holdNumber.equals("Non")) {
-            //支持率データ取得
-            new GetHttpConnectionDataRate(finishSwitch, this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,holdNumber);
-
-        } else {
-            /**
-             * 開催中じゃない旨のアラート
-             */
-        }
-
-
-        /**
-         * gdbは最後にクローズしようねー
-         */
-
-
-
-
-//        //全ての通信からDBへの格納処理が終了するまでwhile
-//        int count = 0;
-//        while (true) {
-//            if (finishSwitch.size() == 1) {
-//                Log.v("TAG", "完了！！！！！！！！！！！！！");
-//                break;
-//            }
-//            Log.v("TAG", String.valueOf(count++));
-//            try {Thread.sleep(500);} catch (Exception e) {} //whileを回す間隔を0.5秒にしよう
-//        }
-//
-//
-        //データをDBから取得
-        getDatabaseData();
-
-
+        //非同期処理の開始
+        getHttpData();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.v("TAG", "すたああああああああああああああああああとおおおおおおおおおおおおおおお");
-    }
+    //非同期処理の切り出し
+    private void getHttpData() {
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.v("TAG", "れじゅううううううううううううむうううううううううううううううううううううう");
+        //インジケータ開始
+        indicator = new ProgressDialog(this);
+        indicator.setMessage("データ取得中...");
+        indicator.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        indicator.show();
+
+        //データベースインスタンスを取得
+        final CheckDatabaseData cdb = new CheckDatabaseData(me);
+
+        //非同期処理の開始
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(final Void... params) {
+                //開催(回数テーブル)のデータが古いかどうかチェックして古ければデータ再取得
+                if(cdb.kaisaiTableDataCheck()) {
+                    //チーム名マップリストと回数テーブルとkumiawaseテーブルのデータをインサート
+                    new GetTeamMapList().getTeamMapList("http://www.geocities.jp/totorandata/", me);
+                    new GetKaisuTableData().getKaisuTableData("https://toto.rakuten.co.jp/toto/schedule/", me);
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                //各テーブルのinsertが終わったら別の非同期スレッドで対象回数totoと(あれば)bookの支持率取得の非同期処理を開始
+                new AsyncTask<Void, Void, Void>() {
+                    @Override
+                    protected Void doInBackground(final Void... params) {
+                        String holdNumber = cdb.holdCheck();
+                        if(!holdNumber.equals("Non")) { //現在が開催期間であればtotoとbookの支持率データ取得(kaisuテーブル参照)
+                           if (cdb.rateGetCheck(holdNumber)) { //データ取得時間がnullだったり、１時間以上前だったらデータ取得(kumiawaseテーブル参照)
+                               new GetRateTotoAndBook().getRateTotoAndBook(holdNumber, me);
+                               cdb.dbClose(); //DBクローズ
+                           }
+                        } else {
+                            issueMessage = "現在開催中のtotoはありません。";
+                            issueCheckFlg = false;
+                            showDialog();
+                            cdb.dbClose(); //DBクローズ
+                            indicator.dismiss(); //インジケータの終了
+                            indicator = null; //インジケータの終了
+                            cancel(true); //cancelすることで次の処理はスルー
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    protected void onPostExecute(Void aVoid) {
+                        //支持率の取得が終わったら各種データをcommonに格納
+                        getDatabaseData();
+
+                        //インジケータの終了
+                        indicator.dismiss();
+                        indicator = null;
+                    }
+                }.execute();
+            }
+        }.execute();
+
     }
 
     //DBから必要情報をゲットしてcommonに格納する
@@ -139,7 +154,6 @@ public class MainActivity extends FragmentActivity {
         } else {
             showDialog();
         }
-
     }
 
     //「マルチ」ボタン押下時はマルチ選択画面に画面遷移
@@ -155,14 +169,17 @@ public class MainActivity extends FragmentActivity {
     public static boolean netWorkCheck(Context context){
         ConnectivityManager cm =  (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = cm.getActiveNetworkInfo();
-        if( info != null ){
-            return info.isConnected();
-        } else {
-            return false;
-        }
+
+        return info != null && info.isConnected();
+//
+//        if( info != null ){
+//            return info.isConnected();
+//        } else {
+//            return false;
+//        }
     }
 
-    //コピーボタン押下時の挙動
+    //メッセージダイアログ
     private void showDialog() {
         OkAlertDialogFragment dialog = new OkAlertDialogFragment();
         Bundle args = new Bundle();

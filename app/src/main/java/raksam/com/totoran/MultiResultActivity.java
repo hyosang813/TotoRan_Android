@@ -167,6 +167,9 @@ public class MultiResultActivity extends FragmentActivity {
                 cb.setVisibility(View.VISIBLE);
                 cb.setChecked(Boolean.valueOf(String.valueOf(hanteiStrAndBool.get(1))));
 
+                //対象が１つしかなかったらenabredをfalseに
+                if (targetHanteiStrArray.size() == 1) cb.setEnabled(false);
+
                 //チェックボックスのクリックリスナー
                 checkArraySynchronism(cb, targetHanteiStrArray);
             }
