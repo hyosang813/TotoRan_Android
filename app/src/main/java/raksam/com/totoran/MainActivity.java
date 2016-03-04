@@ -10,9 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
-
-import java.security.cert.CertificateParsingException;
-import java.util.ArrayList;
+import android.widget.TextView;
 
 
 public class MainActivity extends FragmentActivity {
@@ -20,8 +18,11 @@ public class MainActivity extends FragmentActivity {
     //共通クラスの取得
     protected Common common; // グローバル変数を扱うクラス
 
-    //諸々の問題チェック状態確認フラグ(初期値はtrue)
-    boolean issueCheckFlg = true;
+    //ネットワーク通信の問題チェック状態確認フラグ(初期値はtrue)
+    boolean networkIssueCheckFlg = true;
+
+    //開催期間じゃない場合チェック状態確認フラグ(初期値はtrue)
+    boolean notOpenCheckFlg = true;
 
     //問題発生時の対応メッセージ格納変数
     String issueMessage = "";
@@ -39,8 +40,8 @@ public class MainActivity extends FragmentActivity {
 
         //ネットワーク接続可能判断
         if (!netWorkCheck(this)) {
-            issueMessage = "当アプリはネットワーク通信による情報取得が必須です。\n端末が通信できる状態でアプリを再起動してください。";
-            issueCheckFlg = false;
+            issueMessage = "当アプリはネットワーク通信による情報取得が必須です。\n通信できる状態でアプリを再起動してください。";
+            networkIssueCheckFlg = false;
             showDialog();
             return;
         }
@@ -68,6 +69,9 @@ public class MainActivity extends FragmentActivity {
         //データベースインスタンスを取得
         final CheckDatabaseData cdb = new CheckDatabaseData(me);
 
+        /**
+         * jdeferred ってのを使うとよりシンプルに非同期の連携が書けそう
+         */
         //非同期処理の開始
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -95,7 +99,7 @@ public class MainActivity extends FragmentActivity {
                            }
                         } else {
                             issueMessage = "現在開催中のtotoはありません。";
-                            issueCheckFlg = false;
+                            notOpenCheckFlg = false;
                             showDialog();
                             cdb.dbClose(); //DBクローズ
                             indicator.dismiss(); //インジケータの終了
@@ -113,11 +117,13 @@ public class MainActivity extends FragmentActivity {
                         //インジケータの終了
                         indicator.dismiss();
                         indicator = null;
+
+                        //念のため開催フラグをtrueにしとく
+                        notOpenCheckFlg = true;
                     }
                 }.execute();
             }
         }.execute();
-
     }
 
     //DBから必要情報をゲットしてcommonに格納する
@@ -143,13 +149,16 @@ public class MainActivity extends FragmentActivity {
         //book支持率データの取得
         common.bookRateArray = dbData.getRateArray(common.numberOfTimes).get(1);
 
+        //締切日時を表示
+        showDeadLineDate(common.numberOfTimes, common.deadLineTime);
+
         //DB操作インスタンスの破棄
         dbData.dbClose();
     }
 
     //「シングル」ボタン押下時はシングル選択画面に画面遷移
     public void singleChoiceTransition(View v) {
-        if (issueCheckFlg) {
+        if (networkIssueCheckFlg || notOpenCheckFlg) {
             startActivity(new Intent(MainActivity.this, SingleChoiceActivity.class));
         } else {
             showDialog();
@@ -158,25 +167,54 @@ public class MainActivity extends FragmentActivity {
 
     //「マルチ」ボタン押下時はマルチ選択画面に画面遷移
     public void multiChoiceTransition(View v) {
-        if (issueCheckFlg) {
+        if (networkIssueCheckFlg || notOpenCheckFlg) {
             startActivity(new Intent(MainActivity.this, MultiChoiceActivity.class));
         } else {
             showDialog();
         }
     }
 
+    //「データ再取得」ボタン押下時は強制再取得
+    public void dataReGetAll(View v) {
+        if (networkIssueCheckFlg) {
+            //テーブルデータを削除して再取得
+            CheckDatabaseData cdb = new CheckDatabaseData(me);
+            cdb.tableDataDelete();
+            getHttpData();
+        } else {
+            showDialog();
+        }
+    }
+
+    //「支持率確認」ボタン押下時は支持率確認画面に遷移
+    public void oddsConfirm(View v) {
+        if (networkIssueCheckFlg || notOpenCheckFlg) {
+            /**
+             * 処理
+             *
+             */
+            Log.v("FFFFF", "SSSSS");
+        } else {
+            showDialog();
+        }
+    }
+
+    //回数と締切日時を表示
+    private void showDeadLineDate(String numberOfTimes, String deadLine) {
+        //回数の先頭0取っぱらい処理と最終表示text生成
+        String showNumber = numberOfTimes.substring(0, 1).equals("0") ? numberOfTimes.substring(1, numberOfTimes.length()) : numberOfTimes;
+        String finalShowText =  "対象回:第" + showNumber + "回 toto\n" + deadLine;
+
+        //対象TextViewを取得して表示
+        TextView deadView = (TextView)findViewById(R.id.deadline);
+        deadView.setText(finalShowText);
+    }
+
     // ネットワーク接続確認
-    public static boolean netWorkCheck(Context context){
+    private static boolean netWorkCheck(Context context){
         ConnectivityManager cm =  (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = cm.getActiveNetworkInfo();
-
         return info != null && info.isConnected();
-//
-//        if( info != null ){
-//            return info.isConnected();
-//        } else {
-//            return false;
-//        }
     }
 
     //メッセージダイアログ
