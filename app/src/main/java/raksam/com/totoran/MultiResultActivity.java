@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -313,6 +315,9 @@ public class MultiResultActivity extends FragmentActivity {
 
         //削減の結果で処理変更
         final String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.dataGetTime);
+
+        //結果がなかったらコピーボタン非表示
+        if (reduceTargetStrArray.size() == 0) popupView.findViewById(R.id.pop_hantei_copy_button).setVisibility(View.GONE);
 
         //整形データをTextViewにセット
         tv.setText(reduceText);
