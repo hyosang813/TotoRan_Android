@@ -45,6 +45,9 @@ public class MultiChoiceActivity extends BaseChoiceActivity {
         Intent intent = new Intent(getApplication(), MultiDetailActivity.class);
         intent.putExtra("pickerArrayData", wtCheckArray);
         startActivity(intent);
+
+        //アニメーション設定(進む)
+        overridePendingTransition(R.anim.in_right, R.anim.out_left);
     }
 
 }

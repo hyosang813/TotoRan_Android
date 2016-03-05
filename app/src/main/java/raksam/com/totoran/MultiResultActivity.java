@@ -103,6 +103,9 @@ public class MultiResultActivity extends FragmentActivity {
         //アラートでキャンセル(false)を選択された場合は戻らない
         if (!yesNo) return;
         finish();
+
+        //アニメーション設定(戻る)
+        overridePendingTransition(R.anim.in_left, R.anim.out_right);
     }
 
     //プチ削減ボタン押下で削減条件指定画面ポップアップ

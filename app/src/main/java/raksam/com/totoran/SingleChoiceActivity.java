@@ -53,5 +53,8 @@ public class SingleChoiceActivity extends BaseChoiceActivity {
 
         //画面遷移
         startActivity(new Intent(SingleChoiceActivity.this, SingleDetailActivity.class));
+
+        //アニメーション設定(進む)
+        overridePendingTransition(R.anim.in_right, R.anim.out_left);
     }
 }

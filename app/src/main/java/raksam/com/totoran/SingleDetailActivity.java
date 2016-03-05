@@ -64,6 +64,9 @@ public class SingleDetailActivity extends FragmentActivity {
             intent.putExtra("hanteiStringArrayData", singleHanteiResultArray); //判定ロジックをかましたString二次元Array
             startActivity(intent);
 
+            //アニメーション設定(進む)
+            overridePendingTransition(R.anim.in_right, R.anim.out_left);
+
         } else {
             String warnMessage = "";
             switch (checkResult) {
@@ -93,6 +96,9 @@ public class SingleDetailActivity extends FragmentActivity {
     //シングル選択画面に戻る
     public void goBack(View v) {
         finish();
+
+        //アニメーション設定(戻る)
+        overridePendingTransition(R.anim.in_left, R.anim.out_right);
     }
 
     //各TextViewがtapされたらここが呼ばれてpickerDialogを表示

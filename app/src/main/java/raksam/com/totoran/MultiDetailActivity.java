@@ -62,11 +62,17 @@ public class MultiDetailActivity extends FragmentActivity {
         Intent intent = new Intent(getApplication(), MultiResultActivity.class);
         intent.putExtra("randomStringArrayData", RandomLogic.multiRandomDataMake(common.multiBoolArray, pickerArray)); //ランダムロジックをかましたString二次元Array
         startActivity(intent);
+
+        //アニメーション設定(進む)
+        overridePendingTransition(R.anim.in_right, R.anim.out_left);
     }
 
     //マルチ選択画面に戻る
     public void goBack(View v) {
         finish();
+
+        //アニメーション設定(戻る)
+        overridePendingTransition(R.anim.in_left, R.anim.out_right);
     }
 
     //各TextViewがtapされたらここが呼ばれてpickerDialogを表示

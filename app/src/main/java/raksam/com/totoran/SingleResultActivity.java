@@ -72,6 +72,9 @@ public class SingleResultActivity extends FragmentActivity {
         if (!yesNo) return;
 
         finish();
+
+        //アニメーション設定(戻る)
+        overridePendingTransition(R.anim.in_left, R.anim.out_right);
     }
 
     //コピーボタン押下時の挙動
