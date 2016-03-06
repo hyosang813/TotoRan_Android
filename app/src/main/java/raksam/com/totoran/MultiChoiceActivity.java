@@ -35,7 +35,7 @@ public class MultiChoiceActivity extends BaseChoiceActivity {
             OkAlertDialogFragment dialog = new OkAlertDialogFragment();
             Bundle args = new Bundle();
             args.putString("title", "警告");
-            args.putString("message", "以下の組合わせを超える事は出来ません\n※合計486口を超える事はできません\nダブル:1 トリプル:5\nダブル:2 トリプル:4\nダブル:3 トリプル:3\nダブル:4 トリプル:3\nダブル:5 トリプル:2\nダブル:6 トリプル:1\nダブル:7 トリプル:1\nダブル:8 トリプル:0");
+            args.putString("message", "以下の組合わせを超える事は出来ません\n※合計486口を超える事はできません\n\nダブル:1 トリプル:5\nダブル:2 トリプル:4\nダブル:3 トリプル:3\nダブル:4 トリプル:3\nダブル:5 トリプル:2\nダブル:6 トリプル:1\nダブル:7 トリプル:1\nダブル:8 トリプル:0");
             dialog.setArguments(args);
             dialog.show(getSupportFragmentManager(), "dialog");
             return;
