@@ -64,6 +64,7 @@ public class MainActivity extends FragmentActivity {
         indicator = new ProgressDialog(this);
         indicator.setMessage("データ取得中...");
         indicator.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        indicator.setCanceledOnTouchOutside(false); //インジケータ回転中はタップを無効にする
         indicator.show();
 
         //データベースインスタンスを取得
@@ -114,8 +115,19 @@ public class MainActivity extends FragmentActivity {
                         //支持率の取得が終わったら各種データをcommonに格納
                         getDatabaseData();
 
+                        /**
+                         * 連打時のリークやぬるぽを防ぐために0.5secのタイムラグを設けようかね
+                         * リークが発生したりインジケータ終了のタイミングでnullチェックしないと落ちたりする
+                         * 連打が鍵？？？
+                         */
+                        try {
+                            Thread.sleep(500);
+                        } catch (Exception e) {
+
+                        }
+
                         //インジケータの終了
-                        indicator.dismiss();
+                        if (indicator != null) indicator.dismiss();
                         indicator = null;
 
                         //念のため開催フラグをtrueにしとく
@@ -158,7 +170,7 @@ public class MainActivity extends FragmentActivity {
 
     //「シングル」ボタン押下時はシングル選択画面に画面遷移
     public void singleChoiceTransition(View v) {
-        if (networkIssueCheckFlg || notOpenCheckFlg) {
+        if (networkIssueCheckFlg && notOpenCheckFlg) {
             startActivity(new Intent(MainActivity.this, SingleChoiceActivity.class));
         } else {
             showDialog();
@@ -167,7 +179,7 @@ public class MainActivity extends FragmentActivity {
 
     //「マルチ」ボタン押下時はマルチ選択画面に画面遷移
     public void multiChoiceTransition(View v) {
-        if (networkIssueCheckFlg || notOpenCheckFlg) {
+        if (networkIssueCheckFlg && notOpenCheckFlg) {
             startActivity(new Intent(MainActivity.this, MultiChoiceActivity.class));
         } else {
             showDialog();
@@ -188,12 +200,8 @@ public class MainActivity extends FragmentActivity {
 
     //「支持率確認」ボタン押下時は支持率確認画面に遷移
     public void oddsConfirm(View v) {
-        if (networkIssueCheckFlg || notOpenCheckFlg) {
-            /**
-             * 処理
-             *
-             */
-            Log.v("FFFFF", "SSSSS");
+        if (networkIssueCheckFlg && notOpenCheckFlg)  {
+            startActivity(new Intent(MainActivity.this, RateDonfirmActivity.class));
         } else {
             showDialog();
         }

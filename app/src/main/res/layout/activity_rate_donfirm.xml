@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="raksam.com.totoran.RateDonfirmActivity">
+
+    <!-- 「タイトル」「描画領域」「取得年月日」「セグメントコントロール」 一番外枠のLinearLayout(vertical) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:background="#FFFF00">
+
+        <!-- タイトル -->
+        <TextView
+            android:id="@+id/rate_confirm_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF"
+            android:textSize="30sp"
+            android:text="しじりつ"/>
+
+        <!-- 「各13枠」 各枠を縦に並べるLinearLayout(vertical) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+
+            <!-- ここから -->
+            <!-- 「1枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 1枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 1枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 1枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 1枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「2枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 2枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 2枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 2枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 2枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「3枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 3枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 3枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 3枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 3枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「4枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 4枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 4枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 4枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 4枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「5枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 5枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 5枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 5枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 5枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「6枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 6枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 6枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 6枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 6枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「7枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 7枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 7枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 7枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 7枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_07"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_07"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_07"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_07"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「8枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 8枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 8枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 8枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 8枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_08"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_08"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_08"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_08"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「9枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 9枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 9枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 9枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 9枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_09"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_09"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_09"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_09"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「10枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 10枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 10枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 10枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 10枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「11枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 11枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 11枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 11枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 11枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「12枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 12枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 12枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 12枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 12枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+            <!-- ここから -->
+            <!-- 「13枠分」の横LinearLayout(horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 13枠ホームチーム名 -->
+                <TextView
+                    android:id="@+id/home_team_name_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 13枠vsテキスト -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"
+                    android:text="@string/vs_text"/>
+
+                <!-- 13枠アウェイチーム名 -->
+                <TextView
+                    android:id="@+id/away_team_name_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/pick_value_shape"
+                    android:gravity="center"/>
+
+                <!-- 13枠支持率数字とグラフ描画LinearLayout(vertical) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 支持率の%表示TextView -->
+                    <TextView
+                        android:id="@+id/rate_text_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/pick_value_shape"
+                        android:gravity="center" />
+
+                    <!-- 支持率棒グラフのLinearLayout(horizontal) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_rate_gragh_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/draw_rate_gragh_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/draw_gragh_shape"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/away_rate_gragh_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/away_gragh_shape"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--ここまで-->
+
+        </LinearLayout>
+
+        <!-- 取得年月日 -->
+        <TextView
+            android:id="@+id/rate_confirm_get_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:textSize="15sp" />
+
+        <!-- セグメントコントロール -->
+        <RadioGroup
+            android:id="@+id/rate_seg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 支持率(toto) -->
+            <RadioButton
+                android:id="@+id/rate_seg_toto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/segmented_left"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rate_toto"
+                android:textColor="@drawable/segmented_text_color"/>
+
+            <!-- 支持率(book) -->
+            <RadioButton
+                android:id="@+id/rate_seg_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/segmented_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rate_book"
+                android:textColor="@drawable/segmented_text_color" />
+
+        </RadioGroup>
+
+        <!-- 戻る -->
+        <Button
+            android:id="@+id/back_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:onClick="goBack"
+            android:layout_gravity="center"
+            android:text="@string/back_str"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

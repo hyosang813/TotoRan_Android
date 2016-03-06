@@ -78,6 +78,10 @@
     <string name="lower_e">e</string>
     <string name="lower_f">f</string>
 
+    <!-- 支持率確認画面 -->
+    <string name="vs_text">vs</string>
+    <string name="rate_toto">支持率(toto)</string>
+    <string name="rate_book">支持率(book)</string>
 
 
 </resources>
