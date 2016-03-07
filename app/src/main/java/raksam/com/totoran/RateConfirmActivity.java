@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class RateConfirmActivity extends FragmentActivity {
@@ -80,10 +81,13 @@ public class RateConfirmActivity extends FragmentActivity {
     private void rateGraphDraw(ArrayList<ArrayList<String>> rateArray) {
 
         for (int i = 0; i < rateArray.size(); i++) {
+            //フォーマット指定
+            DecimalFormat df = new DecimalFormat("00.00");
+
             //表示整形するために一回Floatにしてそれを再度Stringに戻す
-            String rateStrHome = String.format("%02.2f", Float.valueOf(rateArray.get(i).get(1)));
-            String rateStrDraw = String.format("%02.2f", Float.valueOf(rateArray.get(i).get(0)));
-            String rateStrAway = String.format("%02.2f", Float.valueOf(rateArray.get(i).get(2)));
+            String rateStrHome = df.format(Float.valueOf(rateArray.get(i).get(1)));
+            String rateStrDraw = df.format(Float.valueOf(rateArray.get(i).get(0)));
+            String rateStrAway = df.format(Float.valueOf(rateArray.get(i).get(2)));
 
             //まずは支持率%のsetText
             String rateStr = rateStrHome + "%          " + rateStrDraw + "%          " + rateStrAway + "%";
@@ -104,7 +108,6 @@ public class RateConfirmActivity extends FragmentActivity {
             findViewById(drawGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateStrDraw) / 100));
             findViewById(awayGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateStrAway) / 100));
         }
-
     }
 
     //前画面に戻る
