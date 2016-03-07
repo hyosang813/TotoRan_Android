@@ -29,10 +29,10 @@ public class PickerDialogFragment extends DialogFragment {
         View pickerLayout = inflater.inflate(R.layout.numberpicker_layout, null, false);
         final NumberPicker np = (NumberPicker) pickerLayout.findViewById(R.id.numberpicker);
         if (minMaxCurValArray != null) {
-            np.setWrapSelectorWheel(false);
             np.setMinValue(minMaxCurValArray.get(0));
             np.setMaxValue(minMaxCurValArray.get(1));
             np.setValue(minMaxCurValArray.get(2));
+            np.setWrapSelectorWheel(false);
         }
         //アラート作成
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
