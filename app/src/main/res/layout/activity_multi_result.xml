@@ -93,8 +93,8 @@
             android:textColor="@drawable/button_text_color_nomal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
             android:onClick="popCopy"
             android:text="@string/copy_str"/>
 

@@ -44,7 +44,7 @@
                     android:id="@+id/draw_checkbox_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/zero"/>
 
@@ -52,7 +52,7 @@
                     android:id="@+id/draw_checkbox_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/one"/>
 
@@ -60,7 +60,7 @@
                     android:id="@+id/draw_checkbox_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/two"/>
 
@@ -68,7 +68,7 @@
                     android:id="@+id/draw_checkbox_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/three"/>
 
@@ -76,7 +76,7 @@
                     android:id="@+id/draw_checkbox_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/four"/>
 
@@ -93,7 +93,7 @@
                     android:id="@+id/draw_checkbox_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/five"/>
 
@@ -101,7 +101,7 @@
                     android:id="@+id/draw_checkbox_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/six"/>
 
@@ -109,7 +109,7 @@
                     android:id="@+id/draw_checkbox_7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/seven"/>
 
@@ -117,7 +117,7 @@
                     android:id="@+id/draw_checkbox_8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/eight"/>
 
@@ -125,7 +125,7 @@
                     android:id="@+id/draw_checkbox_9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/nine"/>
 
@@ -150,7 +150,7 @@
                     android:id="@+id/upper_checkbox_s"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_s"/>
 
@@ -158,7 +158,7 @@
                     android:id="@+id/upper_checkbox_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_a"/>
 
@@ -166,7 +166,7 @@
                     android:id="@+id/upper_checkbox_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_b"/>
 
@@ -174,7 +174,7 @@
                     android:id="@+id/upper_checkbox_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_c"/>
 
@@ -182,7 +182,7 @@
                     android:id="@+id/upper_checkbox_d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_d"/>
 
@@ -199,7 +199,7 @@
                     android:id="@+id/upper_checkbox_e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_e"/>
 
@@ -207,7 +207,7 @@
                     android:id="@+id/upper_checkbox_f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/upper_f"/>
 
@@ -234,7 +234,7 @@
                     android:id="@+id/lower_checkbox_s"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_s"/>
 
@@ -242,7 +242,7 @@
                     android:id="@+id/lower_checkbox_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_a"/>
 
@@ -250,7 +250,7 @@
                     android:id="@+id/lower_checkbox_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_b"/>
 
@@ -258,7 +258,7 @@
                     android:id="@+id/lower_checkbox_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_c"/>
 
@@ -266,7 +266,7 @@
                     android:id="@+id/lower_checkbox_d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_d"/>
 
@@ -283,7 +283,7 @@
                     android:id="@+id/lower_checkbox_e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_e"/>
 
@@ -291,7 +291,7 @@
                     android:id="@+id/lower_checkbox_f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingRight="3dp"
                     android:visibility="gone"
                     android:text="@string/lower_f"/>
 

@@ -153,6 +153,7 @@ public class MultiResultActivity extends FragmentActivity {
             int cbId = getResources().getIdentifier(idStr, "id", getPackageName());
             CheckBox cb = (CheckBox)popupView.findViewById(cbId);
             cb.setVisibility(View.VISIBLE);
+            cb.setTypeface(Typeface.MONOSPACE);
 
             //最初の数値はチェックボックスTrueでグレーアウト
             if (i == Integer.valueOf(drawGroupArray.get(0).get(0).toString())) {
@@ -191,6 +192,7 @@ public class MultiResultActivity extends FragmentActivity {
                 int cbId = getResources().getIdentifier(idStr, "id", getPackageName());
                 CheckBox cb = (CheckBox)popupView.findViewById(cbId);
                 cb.setVisibility(View.VISIBLE);
+                cb.setTypeface(Typeface.MONOSPACE);
                 cb.setChecked(Boolean.valueOf(String.valueOf(hanteiStrAndBool.get(1))));
 
                 //対象が１つしかなかったらenabredをfalseに
