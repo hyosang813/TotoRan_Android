@@ -8,7 +8,6 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -201,7 +200,7 @@ public class MainActivity extends FragmentActivity {
     //「支持率確認」ボタン押下時は支持率確認画面に遷移
     public void oddsConfirm(View v) {
         if (networkIssueCheckFlg && notOpenCheckFlg)  {
-            startActivity(new Intent(MainActivity.this, RateDonfirmActivity.class));
+            startActivity(new Intent(MainActivity.this, RateConfirmActivity.class));
         } else {
             showDialog();
         }

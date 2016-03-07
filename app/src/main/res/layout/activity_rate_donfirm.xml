@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="raksam.com.totoran.RateDonfirmActivity">
+    tools:context=".RateConfirmActivity">
 
     <!-- 「タイトル」「描画領域」「取得年月日」「セグメントコントロール」 一番外枠のLinearLayout(vertical) -->
     <LinearLayout
@@ -103,24 +103,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_01"
+                            android:id="@+id/home_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_01"
+                            android:id="@+id/draw_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_01"
+                            android:id="@+id/away_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -197,24 +197,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_02"
+                            android:id="@+id/home_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_02"
+                            android:id="@+id/draw_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_02"
+                            android:id="@+id/away_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -291,24 +291,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_03"
+                            android:id="@+id/home_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_03"
+                            android:id="@+id/draw_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_03"
+                            android:id="@+id/away_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -385,24 +385,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_04"
+                            android:id="@+id/home_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_04"
+                            android:id="@+id/draw_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_04"
+                            android:id="@+id/away_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -479,24 +479,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_05"
+                            android:id="@+id/home_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_05"
+                            android:id="@+id/draw_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_05"
+                            android:id="@+id/away_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -573,24 +573,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_06"
+                            android:id="@+id/home_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_06"
+                            android:id="@+id/draw_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_06"
+                            android:id="@+id/away_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -667,24 +667,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_07"
+                            android:id="@+id/home_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_07"
+                            android:id="@+id/draw_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_07"
+                            android:id="@+id/away_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -761,24 +761,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_08"
+                            android:id="@+id/home_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_08"
+                            android:id="@+id/draw_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_08"
+                            android:id="@+id/away_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -855,24 +855,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_09"
+                            android:id="@+id/home_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_09"
+                            android:id="@+id/draw_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_09"
+                            android:id="@+id/away_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -949,24 +949,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_10"
+                            android:id="@+id/home_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_10"
+                            android:id="@+id/draw_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_10"
+                            android:id="@+id/away_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -1043,24 +1043,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_11"
+                            android:id="@+id/home_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_11"
+                            android:id="@+id/draw_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_11"
+                            android:id="@+id/away_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -1137,24 +1137,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_12"
+                            android:id="@+id/home_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_12"
+                            android:id="@+id/draw_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_12"
+                            android:id="@+id/away_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 
@@ -1231,24 +1231,24 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/home_rate_gragh_13"
+                            android:id="@+id/home_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/home_gragh_shape"
+                            android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/draw_rate_gragh_13"
+                            android:id="@+id/draw_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/draw_gragh_shape"
+                            android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
                         <TextView
-                            android:id="@+id/away_rate_gragh_13"
+                            android:id="@+id/away_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/away_gragh_shape"
+                            android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
 

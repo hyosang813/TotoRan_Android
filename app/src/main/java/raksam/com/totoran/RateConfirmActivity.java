@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class RateDonfirmActivity extends FragmentActivity {
+public class RateConfirmActivity extends FragmentActivity {
 
     //共通クラスの取得
     protected Common common; // グローバル変数を扱うクラス
@@ -80,24 +80,29 @@ public class RateDonfirmActivity extends FragmentActivity {
     private void rateGraphDraw(ArrayList<ArrayList<String>> rateArray) {
 
         for (int i = 0; i < rateArray.size(); i++) {
+            //表示整形するために一回Floatにしてそれを再度Stringに戻す
+            String rateStrHome = String.format("%02.2f", Float.valueOf(rateArray.get(i).get(1)));
+            String rateStrDraw = String.format("%02.2f", Float.valueOf(rateArray.get(i).get(0)));
+            String rateStrAway = String.format("%02.2f", Float.valueOf(rateArray.get(i).get(2)));
+
             //まずは支持率%のsetText
-            String rateStr = rateArray.get(i).get(1) + "%          " + rateArray.get(i).get(0) + "%          " + rateArray.get(i).get(2) + "%";
+            String rateStr = rateStrHome + "%          " + rateStrDraw + "%          " + rateStrAway + "%";
             String rateTextView = "rate_text_" + String.format("%02d", i + 1);
             int rateTextId = getResources().getIdentifier(rateTextView, "id", getPackageName());
             ((TextView)findViewById(rateTextId)).setText(rateStr);
 
             //次はグラフのウエイト設定
-            String homeGraph = "home_rate_gragh_" + String.format("%02d", i + 1);
-            String drawGraph = "draw_rate_gragh_" + String.format("%02d", i + 1);
-            String awayGraph = "away_rate_gragh_" + String.format("%02d", i + 1);
+            String homeGraph = "home_rate_graph_" + String.format("%02d", i + 1);
+            String drawGraph = "draw_rate_graph_" + String.format("%02d", i + 1);
+            String awayGraph = "away_rate_graph_" + String.format("%02d", i + 1);
             int homeGraphId = getResources().getIdentifier(homeGraph, "id", getPackageName());
             int drawGraphId = getResources().getIdentifier(drawGraph, "id", getPackageName());
             int awayGraphId = getResources().getIdentifier(awayGraph, "id", getPackageName());
 
             final int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
-            findViewById(homeGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateArray.get(i).get(1)) / 100));
-            findViewById(drawGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateArray.get(i).get(0)) / 100));
-            findViewById(awayGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateArray.get(i).get(2)) / 100));
+            findViewById(homeGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateStrHome) / 100));
+            findViewById(drawGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateStrDraw) / 100));
+            findViewById(awayGraphId).setLayoutParams(new LinearLayout.LayoutParams(WC, WC, Float.valueOf(rateStrAway) / 100));
         }
 
     }
