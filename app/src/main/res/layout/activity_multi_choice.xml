@@ -22,8 +22,12 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginBottom="20dp"
-            android:background="#FFFFFF"
             android:textColor="@drawable/button_text_color_red"
+            android:shadowColor="#0000FF"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="9"
+            android:textStyle="bold"
             android:textSize="30sp"
             android:text="マルチ選択"/>
         <!-- 中抜き文字装飾できねえかな？？？？？？？？？？？？-->
