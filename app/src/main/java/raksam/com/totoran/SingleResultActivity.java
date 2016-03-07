@@ -8,7 +8,11 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import net.nend.android.NendAdView;
 
 import java.util.ArrayList;
 
@@ -19,6 +23,9 @@ public class SingleResultActivity extends FragmentActivity {
 
     //判定結果
     String singleHanteiStr = "";
+
+    //NEND
+    private NendAdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,19 @@ public class SingleResultActivity extends FragmentActivity {
         //整形データをTextViewにセット
         singleHanteiStr = HanteiStrMake.resultHanteiStr(hanteiStrArray, common.dataGetTime);
         tv.setText(singleHanteiStr);
+
+        //NEND広告の表示
+        RelativeLayout rootLayout = (RelativeLayout) findViewById(R.id.single_result);
+
+        // 1 NendAdView をインスタンス化
+        adView = new NendAdView(this, 3174, "c5cb8bc474345961c6e7a9778c947957ed8e1e4f"); //テスト
+//        adView = new NendAdView(this, 555646, "6d5a08cb10ed4fb4359de92bb644a7dec23a20a1"); //本番
+
+        // 2 NendAdView をレイアウトに追加
+        rootLayout.addView(adView, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+        // 3 広告の取得を開始
+        adView.loadAd();
     }
 
     //コピーボタン押下
@@ -70,6 +90,9 @@ public class SingleResultActivity extends FragmentActivity {
     public void back(boolean yesNo) {
         //アラートでキャンセル(false)を選択された場合は戻らない
         if (!yesNo) return;
+
+        //NENDの終了
+        adView = null;
 
         finish();
 

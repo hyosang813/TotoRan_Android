@@ -64,4 +64,14 @@
         android:onClick="goBack"
         android:text="@string/back_str"/>
 
+    <!-- NEND表示用レイアウト -->
+    <RelativeLayout
+        android:id="@+id/single_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal">
+
+    </RelativeLayout>
+
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -14,11 +13,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import net.nend.android.NendAdView;
 
 import java.util.ArrayList;
 
@@ -43,6 +44,9 @@ public class MultiResultActivity extends FragmentActivity {
 
     //最終表示用変数用意
     private String displayText = "";
+
+    //NEND
+    private NendAdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +80,19 @@ public class MultiResultActivity extends FragmentActivity {
         }
         tv.setText(displayText);
 
+        //NEND広告の表示
+        RelativeLayout rootLayout = (RelativeLayout) findViewById(R.id.multi_result);
+
+        // 1 NendAdView をインスタンス化
+        adView = new NendAdView(this, 3174, "c5cb8bc474345961c6e7a9778c947957ed8e1e4f"); //テスト
+//        adView = new NendAdView(this, 555646, "6d5a08cb10ed4fb4359de92bb644a7dec23a20a1"); //本番
+
+        // 2 NendAdView をレイアウトに追加
+        rootLayout.addView(adView, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+        // 3 広告の取得を開始
+        adView.loadAd();
+
         //判定用の数列生成と削減対象有無(大文字、小文字、ドロー数)の生成
         /**
          * 判定の数列はリターンさせるが、削減対象有無は入れ物だけ一緒に投げて参照する
@@ -102,6 +119,10 @@ public class MultiResultActivity extends FragmentActivity {
     public void back(boolean yesNo) {
         //アラートでキャンセル(false)を選択された場合は戻らない
         if (!yesNo) return;
+
+        //NENDの終了
+        adView = null;
+
         finish();
 
         //アニメーション設定(戻る)
