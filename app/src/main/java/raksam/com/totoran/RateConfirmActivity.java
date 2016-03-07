@@ -18,7 +18,7 @@ public class RateConfirmActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rate_donfirm);
+        setContentView(R.layout.activity_rate_confirm);
 
         //共通クラス取得
         common = (Common) getApplication();

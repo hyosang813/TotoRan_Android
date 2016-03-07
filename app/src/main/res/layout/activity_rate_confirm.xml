@@ -53,6 +53,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -64,6 +65,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -77,6 +79,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -93,6 +96,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -106,6 +110,7 @@
                             android:id="@+id/home_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -113,6 +118,7 @@
                             android:id="@+id/draw_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -120,6 +126,7 @@
                             android:id="@+id/away_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -147,6 +154,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -158,6 +166,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -171,6 +180,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -187,6 +197,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -200,6 +211,7 @@
                             android:id="@+id/home_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -207,6 +219,7 @@
                             android:id="@+id/draw_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -214,6 +227,7 @@
                             android:id="@+id/away_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -241,6 +255,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -252,6 +267,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -265,6 +281,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -281,6 +298,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -294,6 +312,7 @@
                             android:id="@+id/home_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -301,6 +320,7 @@
                             android:id="@+id/draw_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -308,6 +328,7 @@
                             android:id="@+id/away_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -335,6 +356,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -346,6 +368,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -359,6 +382,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -375,6 +399,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -388,6 +413,7 @@
                             android:id="@+id/home_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -395,6 +421,7 @@
                             android:id="@+id/draw_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -402,6 +429,7 @@
                             android:id="@+id/away_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -429,6 +457,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -440,6 +469,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -453,6 +483,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -469,6 +500,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -482,6 +514,7 @@
                             android:id="@+id/home_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -489,6 +522,7 @@
                             android:id="@+id/draw_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -496,6 +530,7 @@
                             android:id="@+id/away_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -523,6 +558,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -534,6 +570,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -547,6 +584,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -563,6 +601,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -576,6 +615,7 @@
                             android:id="@+id/home_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -583,6 +623,7 @@
                             android:id="@+id/draw_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -590,6 +631,7 @@
                             android:id="@+id/away_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -617,6 +659,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -628,6 +671,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -641,6 +685,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -657,6 +702,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -670,6 +716,7 @@
                             android:id="@+id/home_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -677,6 +724,7 @@
                             android:id="@+id/draw_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -684,6 +732,7 @@
                             android:id="@+id/away_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -711,6 +760,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -722,6 +772,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -735,6 +786,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -751,6 +803,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -764,6 +817,7 @@
                             android:id="@+id/home_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -771,6 +825,7 @@
                             android:id="@+id/draw_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -778,6 +833,7 @@
                             android:id="@+id/away_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -805,6 +861,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -816,6 +873,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -829,6 +887,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -845,6 +904,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -858,6 +918,7 @@
                             android:id="@+id/home_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -865,6 +926,7 @@
                             android:id="@+id/draw_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -872,6 +934,7 @@
                             android:id="@+id/away_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -899,6 +962,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -910,6 +974,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -923,6 +988,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -939,6 +1005,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -952,6 +1019,7 @@
                             android:id="@+id/home_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -959,6 +1027,7 @@
                             android:id="@+id/draw_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -966,6 +1035,7 @@
                             android:id="@+id/away_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -993,6 +1063,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -1004,6 +1075,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -1017,6 +1089,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -1033,6 +1106,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -1046,6 +1120,7 @@
                             android:id="@+id/home_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1053,6 +1128,7 @@
                             android:id="@+id/draw_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1060,6 +1136,7 @@
                             android:id="@+id/away_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1087,6 +1164,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -1098,6 +1176,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -1111,6 +1190,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -1127,6 +1207,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -1140,6 +1221,7 @@
                             android:id="@+id/home_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1147,6 +1229,7 @@
                             android:id="@+id/draw_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1154,6 +1237,7 @@
                             android:id="@+id/away_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1181,6 +1265,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -1192,6 +1277,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"
                     android:text="@string/vs_text"/>
@@ -1205,6 +1291,7 @@
                     android:paddingBottom="10dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
+                    android:textSize="12sp"
                     android:background="@drawable/pick_value_shape"
                     android:gravity="center"/>
 
@@ -1221,6 +1308,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
                         android:paddingLeft="5dp"
+                        android:textSize="12sp"
                         android:background="@drawable/pick_value_shape"
                         android:gravity="center" />
 
@@ -1234,6 +1322,7 @@
                             android:id="@+id/home_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1241,6 +1330,7 @@
                             android:id="@+id/draw_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1248,6 +1338,7 @@
                             android:id="@+id/away_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="15sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1294,6 +1385,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="@string/rate_toto"
+                android:textSize="15sp"
                 android:textColor="@drawable/segmented_text_color"/>
 
             <!-- 支持率(book) -->
@@ -1309,6 +1401,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="@string/rate_book"
+                android:textSize="15sp"
                 android:textColor="@drawable/segmented_text_color" />
 
         </RadioGroup>

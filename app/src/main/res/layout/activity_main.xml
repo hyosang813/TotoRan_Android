@@ -27,6 +27,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_shape_nomal"
         android:textColor="@drawable/button_text_color_nomal"
+        android:textSize="20sp"
         android:text="@string/single_button"
         android:onClick="singleChoiceTransition"
         android:layout_weight="1"/>
@@ -38,6 +39,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_shape_nomal"
         android:textColor="@drawable/button_text_color_nomal"
+        android:textSize="20sp"
         android:text="@string/multi_button"
         android:onClick="multiChoiceTransition"
         android:layout_weight="1"/>
@@ -49,6 +51,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_shape_blue"
         android:textColor="@drawable/button_text_color_blue"
+        android:textSize="20sp"
         android:text="@string/odds_confirm"
         android:onClick="oddsConfirm"
         android:layout_weight="1"/>
@@ -60,6 +63,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_shape_red"
         android:textColor="@drawable/button_text_color_red"
+        android:textSize="20sp"
         android:text="@string/data_get"
         android:onClick="dataReGetAll"
         android:layout_weight="1"/>
@@ -71,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
+        android:textSize="12sp"
         android:text="\n"
         android:layout_weight="2"/>
 
