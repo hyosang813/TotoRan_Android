@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RateConfirmActivity">
+    tools:context=".RateConfirmActivity"
+    android:background="#FFFF00">
 
     <!-- 「タイトル」「描画領域」「取得年月日」「セグメントコントロール」 一番外枠のLinearLayout(vertical) -->
     <LinearLayout
@@ -16,8 +17,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        android:gravity="top"
-        android:background="#FFFF00">
+        android:gravity="top">
 
         <!-- タイトル -->
         <TextView
@@ -49,8 +49,8 @@
                     android:id="@+id/home_team_name_01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -61,8 +61,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -75,8 +75,8 @@
                     android:id="@+id/away_team_name_01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -110,7 +110,7 @@
                             android:id="@+id/home_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -118,7 +118,7 @@
                             android:id="@+id/draw_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -126,7 +126,7 @@
                             android:id="@+id/away_rate_graph_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -150,8 +150,8 @@
                     android:id="@+id/home_team_name_02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -162,8 +162,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -176,8 +176,8 @@
                     android:id="@+id/away_team_name_02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -211,7 +211,7 @@
                             android:id="@+id/home_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -219,7 +219,7 @@
                             android:id="@+id/draw_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -227,7 +227,7 @@
                             android:id="@+id/away_rate_graph_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -251,8 +251,8 @@
                     android:id="@+id/home_team_name_03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -263,8 +263,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -277,8 +277,8 @@
                     android:id="@+id/away_team_name_03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -312,7 +312,7 @@
                             android:id="@+id/home_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -320,7 +320,7 @@
                             android:id="@+id/draw_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -328,7 +328,7 @@
                             android:id="@+id/away_rate_graph_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -352,8 +352,8 @@
                     android:id="@+id/home_team_name_04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -364,8 +364,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -378,8 +378,8 @@
                     android:id="@+id/away_team_name_04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -413,7 +413,7 @@
                             android:id="@+id/home_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -421,7 +421,7 @@
                             android:id="@+id/draw_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -429,7 +429,7 @@
                             android:id="@+id/away_rate_graph_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -453,8 +453,8 @@
                     android:id="@+id/home_team_name_05"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -465,8 +465,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -479,8 +479,8 @@
                     android:id="@+id/away_team_name_05"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -514,7 +514,7 @@
                             android:id="@+id/home_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -522,7 +522,7 @@
                             android:id="@+id/draw_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -530,7 +530,7 @@
                             android:id="@+id/away_rate_graph_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -554,8 +554,8 @@
                     android:id="@+id/home_team_name_06"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -566,8 +566,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -580,8 +580,8 @@
                     android:id="@+id/away_team_name_06"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -615,7 +615,7 @@
                             android:id="@+id/home_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -623,7 +623,7 @@
                             android:id="@+id/draw_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -631,7 +631,7 @@
                             android:id="@+id/away_rate_graph_06"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -655,8 +655,8 @@
                     android:id="@+id/home_team_name_07"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -667,8 +667,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -681,8 +681,8 @@
                     android:id="@+id/away_team_name_07"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -716,7 +716,7 @@
                             android:id="@+id/home_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -724,7 +724,7 @@
                             android:id="@+id/draw_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -732,7 +732,7 @@
                             android:id="@+id/away_rate_graph_07"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -756,8 +756,8 @@
                     android:id="@+id/home_team_name_08"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -768,8 +768,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -782,8 +782,8 @@
                     android:id="@+id/away_team_name_08"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -817,7 +817,7 @@
                             android:id="@+id/home_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -825,7 +825,7 @@
                             android:id="@+id/draw_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -833,7 +833,7 @@
                             android:id="@+id/away_rate_graph_08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -857,8 +857,8 @@
                     android:id="@+id/home_team_name_09"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -869,8 +869,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -883,8 +883,8 @@
                     android:id="@+id/away_team_name_09"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -918,7 +918,7 @@
                             android:id="@+id/home_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -926,7 +926,7 @@
                             android:id="@+id/draw_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -934,7 +934,7 @@
                             android:id="@+id/away_rate_graph_09"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -958,8 +958,8 @@
                     android:id="@+id/home_team_name_10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -970,8 +970,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -984,8 +984,8 @@
                     android:id="@+id/away_team_name_10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1019,7 +1019,7 @@
                             android:id="@+id/home_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1027,7 +1027,7 @@
                             android:id="@+id/draw_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1035,7 +1035,7 @@
                             android:id="@+id/away_rate_graph_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1059,8 +1059,8 @@
                     android:id="@+id/home_team_name_11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1071,8 +1071,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1085,8 +1085,8 @@
                     android:id="@+id/away_team_name_11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1120,7 +1120,7 @@
                             android:id="@+id/home_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1128,7 +1128,7 @@
                             android:id="@+id/draw_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1136,7 +1136,7 @@
                             android:id="@+id/away_rate_graph_11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1160,8 +1160,8 @@
                     android:id="@+id/home_team_name_12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1172,8 +1172,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1186,8 +1186,8 @@
                     android:id="@+id/away_team_name_12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1221,7 +1221,7 @@
                             android:id="@+id/home_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1229,7 +1229,7 @@
                             android:id="@+id/draw_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1237,7 +1237,7 @@
                             android:id="@+id/away_rate_graph_12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1261,8 +1261,8 @@
                     android:id="@+id/home_team_name_13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1273,8 +1273,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1287,8 +1287,8 @@
                     android:id="@+id/away_team_name_13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
                     android:textSize="12sp"
@@ -1322,7 +1322,7 @@
                             android:id="@+id/home_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/home_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1330,7 +1330,7 @@
                             android:id="@+id/draw_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/draw_graph_shape"
                             android:layout_weight="1"/>
 
@@ -1338,7 +1338,7 @@
                             android:id="@+id/away_rate_graph_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:background="@drawable/away_graph_shape"
                             android:layout_weight="1"/>
 
