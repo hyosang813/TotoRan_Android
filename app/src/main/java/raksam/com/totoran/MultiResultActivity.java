@@ -147,7 +147,7 @@ public class MultiResultActivity extends FragmentActivity {
              * 応急処置的にドロー10以上は対象外にする
              * 恒久処置になるかも？？？
              */
-            if (i == 10) break;
+            if (i >= 10) break;
             
             //対象のチェックボックスを取得
             String idStr = "draw_checkbox_" + String.valueOf(i);
