@@ -1,7 +1,9 @@
 package raksam.com.totoran;
 
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -31,11 +33,20 @@ public class BaseChoiceActivity extends FragmentActivity {
         //ボタンの選択状況Arrayを取得（Single or Multi）
         parentBoolArray = this instanceof SingleChoiceActivity ? common.singleBoolArray : common.multiBoolArray;
 
-        // 予め音声データを読み込む
-        buttonSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0); //この定義の仕方はLolipopで非推奨になったけどminAPIレベルがJeryBeanなのでシャーない
+        //SoundPoolのインスタンス生成方法がAPIレベル21から変わったらしい
+        if(Build.VERSION.SDK_INT < 21){
+            buttonSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        }else {
+            buttonSoundPool =  new SoundPool.Builder()
+                    .setAudioAttributes(new AudioAttributes.Builder()
+                            .setUsage(AudioAttributes.USAGE_ALARM)
+                            .build())
+                    .setMaxStreams(2)
+                    .build();
+        }
+
         buttonSoundId = buttonSoundPool.load(getApplicationContext(), R.raw.kashan, 0); //各ボタンのサウンド
         clearSoundId = buttonSoundPool.load(getApplicationContext(), R.raw.erase, 0); //クリアボタンのサウンド
-
     }
 
     //ボタンにチーム名設定
