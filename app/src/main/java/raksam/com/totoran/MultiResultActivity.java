@@ -70,7 +70,7 @@ public class MultiResultActivity extends FragmentActivity {
             displayText += String.format("%02d", i + 1) +
                     " " +
                     common.teamNameArray.get(i).get(0) +
-                    " - " +
+                    " ー " +
                     common.teamNameArray.get(i).get(1) +
                     " [" +
                     randomStrArray.get(i).get(0) +
@@ -131,6 +131,8 @@ public class MultiResultActivity extends FragmentActivity {
 
     //プチ削減ボタン押下で削減条件指定画面ポップアップ
     public void popSakugen(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
 
         //プチ削減表示ポップアップWindow
         PopupWindow popReduceWindow = new PopupWindow(MultiResultActivity.this);
@@ -311,6 +313,8 @@ public class MultiResultActivity extends FragmentActivity {
 
     //判定ボタン押下で判定結果表示画面ポップアップ
     public void popHantei(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
 
         //判定結果表示ポップアップWindow
         PopupWindow popHanteiWindow = new PopupWindow(MultiResultActivity.this);

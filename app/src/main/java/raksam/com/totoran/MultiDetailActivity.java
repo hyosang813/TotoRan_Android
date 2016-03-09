@@ -47,6 +47,9 @@ public class MultiDetailActivity extends FragmentActivity {
 
     //「次へ」ボタン押下時はマルチ結果画面に画面遷移
     public void multiResultTransition(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         //チェックに引っかかった場合はアラート表示して画面遷移中止
         if (ConsistencyCheck.doubleTripleCheck(pickerArray)) {
             OkAlertDialogFragment dialog = new OkAlertDialogFragment();

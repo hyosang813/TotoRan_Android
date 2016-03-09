@@ -49,6 +49,9 @@ public class SingleDetailActivity extends FragmentActivity {
 
     //「次へ」ボタン押下時はシングル結果画面に画面遷移
     public void singleResultTransition(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         //整合性チェック
         int checkResult = ConsistencyCheck.singleConsistencyCheck(pickerArray);
 

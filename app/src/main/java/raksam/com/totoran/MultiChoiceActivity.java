@@ -23,6 +23,9 @@ public class MultiChoiceActivity extends BaseChoiceActivity {
 
     //「次へ」ボタン押下時
     public void multiResultTransition(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         //ボタンのbool状態をcommonに格納する共通メソッドコール
         setBoolArray("multi");
 

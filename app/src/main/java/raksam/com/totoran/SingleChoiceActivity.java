@@ -48,6 +48,9 @@ public class SingleChoiceActivity extends BaseChoiceActivity {
 
     //「次へ」ボタン押下時はシングル条件指定画面に画面遷移
     public void singleResultTransition(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         //ボタンのbool状態をcommonに格納する共通メソッドコール
         setBoolArray("single");
 

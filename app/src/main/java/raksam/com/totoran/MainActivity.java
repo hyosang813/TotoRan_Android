@@ -8,6 +8,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -95,17 +96,17 @@ public class MainActivity extends FragmentActivity {
                         if(!holdNumber.equals("Non")) { //現在が開催期間であればtotoとbookの支持率データ取得(kaisuテーブル参照)
                            if (cdb.rateGetCheck(holdNumber)) { //データ取得時間がnullだったり、１時間以上前だったらデータ取得(kumiawaseテーブル参照)
                                new GetRateTotoAndBook().getRateTotoAndBook(holdNumber, me);
-                               cdb.dbClose(); //DBクローズ
                            }
                         } else {
                             issueMessage = "現在開催中のtotoはありません。";
                             notOpenCheckFlg = false;
                             showDialog();
-                            cdb.dbClose(); //DBクローズ
                             indicator.dismiss(); //インジケータの終了
                             indicator = null; //インジケータの終了
+                            cdb.dbClose(); //DBクローズ
                             cancel(true); //cancelすることで次の処理はスルー
                         }
+                        cdb.dbClose(); //DBクローズ
                         return null;
                     }
 
@@ -113,17 +114,6 @@ public class MainActivity extends FragmentActivity {
                     protected void onPostExecute(Void aVoid) {
                         //支持率の取得が終わったら各種データをcommonに格納
                         getDatabaseData();
-
-                        /**
-                         * 連打時のリークやぬるぽを防ぐために0.5secのタイムラグを設けようかね
-                         * リークが発生したりインジケータ終了のタイミングでnullチェックしないと落ちたりする
-                         * 連打が鍵？？？
-                         */
-                        try {
-                            Thread.sleep(500);
-                        } catch (Exception e) {
-
-                        }
 
                         //インジケータの終了
                         if (indicator != null) indicator.dismiss();
@@ -169,6 +159,9 @@ public class MainActivity extends FragmentActivity {
 
     //「シングル」ボタン押下時はシングル選択画面に画面遷移
     public void singleChoiceTransition(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         if (networkIssueCheckFlg && notOpenCheckFlg) {
             startActivity(new Intent(MainActivity.this, SingleChoiceActivity.class));
         } else {
@@ -178,6 +171,9 @@ public class MainActivity extends FragmentActivity {
 
     //「マルチ」ボタン押下時はマルチ選択画面に画面遷移
     public void multiChoiceTransition(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         if (networkIssueCheckFlg && notOpenCheckFlg) {
             startActivity(new Intent(MainActivity.this, MultiChoiceActivity.class));
         } else {
@@ -187,10 +183,14 @@ public class MainActivity extends FragmentActivity {
 
     //「データ再取得」ボタン押下時は強制再取得
     public void dataReGetAll(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         if (networkIssueCheckFlg) {
             //テーブルデータを削除して再取得
             CheckDatabaseData cdb = new CheckDatabaseData(me);
             cdb.tableDataDelete();
+            cdb.dbClose();
             getHttpData();
         } else {
             showDialog();
@@ -199,6 +199,9 @@ public class MainActivity extends FragmentActivity {
 
     //「支持率確認」ボタン押下時は支持率確認画面に遷移
     public void oddsConfirm(View v) {
+        //ボタン連打制御(１秒)
+        if (!Common.isClickEvent()) return;
+
         if (networkIssueCheckFlg && notOpenCheckFlg)  {
             startActivity(new Intent(MainActivity.this, RateConfirmActivity.class));
         } else {
