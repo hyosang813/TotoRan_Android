@@ -60,7 +60,12 @@
         <activity
             android:name=".MultiResultActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".RateConfirmActivity" />
+
+        <!-- 支持率確認画面 -->
+        <activity
+            android:name=".RateConfirmActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
