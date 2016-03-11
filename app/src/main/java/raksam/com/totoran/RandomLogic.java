@@ -9,9 +9,6 @@ import java.util.Random;
  * ランダムロジッククラス
  */
 public class RandomLogic {
-
-    private static final int BASE_COUNT = 13;
-
     /**
      *シングルランダムロジック
      */
@@ -150,7 +147,6 @@ public class RandomLogic {
 
         //ダブル枠数は変動するから別保存
         int doubleWakuCount =  wakuNumArray.get(1).size();
-        int a = pickArray.get(0).get(2);
 
         //ダブル昇格抽選　※ダブルがトリプルに昇格してる可能性があるから注意！！！
         for (int i = 0; i < pickArray.get(0).get(2) - doubleWakuCount; i++) {

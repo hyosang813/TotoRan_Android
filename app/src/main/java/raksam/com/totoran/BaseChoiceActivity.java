@@ -143,7 +143,6 @@ public class BaseChoiceActivity extends FragmentActivity {
         String sourceIdName = getApplicationContext().getResources().getResourceEntryName(v.getId());
         String prefixStr = sourceIdName.substring(0, sourceIdName.indexOf("_"));
 
-        boolean checkedContain = false;
         for (int i = 0; i < 13; i++) {
             for (int j = 0; j < 3; j++) {
                 //id文字列作成
@@ -160,15 +159,15 @@ public class BaseChoiceActivity extends FragmentActivity {
                     args.putString("message","前画面に戻ると現在の選択状態が破棄されますが、よろしいですか？");
                     dialog.setArguments(args);
                     dialog.show(getSupportFragmentManager(), "dialog");
-                    checkedContain = true;
                     return;
                 }
             }
         }
 
         //全部非選択の場合は前画面に戻る
-        if (!checkedContain) back(true);
+        back(true);
     }
+
 
     //前画面に戻る
     public void back(boolean yesNo) {

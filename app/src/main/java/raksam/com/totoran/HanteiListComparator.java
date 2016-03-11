@@ -7,6 +7,8 @@ import java.util.ArrayList;
  * 判定済み数列データを降順ソートするクラス
  */
 public class HanteiListComparator implements java.util.Comparator {
+
+    @SuppressWarnings("unchecked") //Object型からArrayList<String>に直接キャストしてるのでワーニングがでるから消すためのアノテーション
     public int compare(Object s, Object t) {
         float dispatch =  Float.valueOf(((ArrayList<String>) s).get(0)) - Float.valueOf(((ArrayList<String>) t).get(0));
         if (dispatch > 0) {

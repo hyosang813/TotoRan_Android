@@ -5,6 +5,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,7 +23,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME_ASSET = "toto.db";
     private static final int DATABASE_VERSION = 1;
 
-    private SQLiteDatabase mDatabase;
+//    private SQLiteDatabase mDatabase;
     private final Context mContext;
     private final File mDatabasePath;
 
@@ -38,9 +39,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void createEmptyDataBase() throws IOException {
         boolean dbExist = checkDataBaseExists();
 
-        if (dbExist) {
-            // すでにデータベースは作成されている
-        } else {
+        // データベースが作成されていなければ以下の処理を行う
+        if (!dbExist) {
             // このメソッドを呼ぶことで、空のデータベースがアプリのデフォルトシステムパスに作られる
             getReadableDatabase();
 
@@ -49,11 +49,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 copyDataBaseFromAsset();
 
                 String dbPath = mDatabasePath.getAbsolutePath();
-                SQLiteDatabase checkDb = null;
+                SQLiteDatabase checkDb;
                 try {
                     checkDb = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
-                } catch (SQLiteException e) {
-                }
+                } catch (SQLiteException e) {throw e;}
 
                 if (checkDb != null) {
                     checkDb.setVersion(DATABASE_VERSION);
@@ -97,7 +96,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         // データベースが存在していて最新ではないので削除
         File f = new File(dbPath);
-        f.delete();
+        if (!f.delete()) {
+            Log.e("ERROR","file delete error!");
+        }
         return false;
     }
 
@@ -143,9 +144,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public synchronized void close() {
-        if(mDatabase != null) {
-            mDatabase.close();
-        }
+//        if(mDatabase != null) {
+//            mDatabase.close();
+//        }
 
         super.close();
     }

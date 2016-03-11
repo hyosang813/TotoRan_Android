@@ -6,9 +6,15 @@
     <string name="multi_button">マルチ</string>
     <string name="odds_confirm">支持率確認</string>
     <string name="data_get">データ再取得</string>
+    <string name="logo">LOGO</string>
+    <string name="line_break">\n</string>
+
 
     <!-- 選択画面の「DRAW」 -->
     <string name="draw_str">DRAW</string>
+    <string name="choice_multi">マルチ選択</string>
+    <string name="choice_single">シングル選択</string>
+
 
     <!-- シングル条件指定画面 -->
     <string name="hda_title">■「ホーム、ドロー、アウェイ」の数</string>
@@ -18,18 +24,23 @@
     <string name="unit_title">■口数(最大１０口)</string>
     <string name="ijou_str">以上</string>
     <string name="unit_str">口</string>
+    <string name="detail_single">シングル条件指定</string>
 
     <!-- マルチ条件指定画面 -->
     <string name="dt_title">■「ダブル、トリプル」の数</string>
     <string name="double_title">・「ダブル」の数　</string>
     <string name="triple_title">・「トリプル」の数</string>
+    <string name="detail_multi">マルチ条件指定</string>
+
 
     <!-- シングル結果画面 -->
     <string name="copy_str">コピー</string>
+    <string name="result_single">シングル結果</string>
 
     <!-- マルチ結果画面 -->
     <string name="puchi_str">プチ削減</string>
     <string name="hantei_str">判定表示</string>
+    <string name="result_multi">マルチ結果</string>
 
     <!-- 選択画面共通 -->
     <string name="clear_str">CLEAR</string>

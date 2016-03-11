@@ -8,9 +8,6 @@ import java.util.ArrayList;
 
 public class MultiChoiceActivity extends BaseChoiceActivity {
 
-    //次画面に渡すピッカー用Array
-    ArrayList<ArrayList<Integer>> wtCheckArray;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

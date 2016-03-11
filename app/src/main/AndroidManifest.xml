@@ -60,7 +60,7 @@
         <activity
             android:name=".MultiResultActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".RateConfirmActivity"></activity>
+        <activity android:name=".RateConfirmActivity" />
     </application>
 
 </manifest>

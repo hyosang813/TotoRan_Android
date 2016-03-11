@@ -138,7 +138,7 @@ public class MultiResultActivity extends FragmentActivity {
         PopupWindow popReduceWindow = new PopupWindow(MultiResultActivity.this);
 
         // レイアウト設定
-        final View popupView = getLayoutInflater().inflate(R.layout.pop_reduce_result, null);
+        final View popupView = getLayoutInflater().inflate(R.layout.pop_reduce_result, (ViewGroup)findViewById(R.id.pop_reduce_root_layout), false);
 
         //ドローの選択チェックボックス
         int arrayCounter = 1;
@@ -148,7 +148,7 @@ public class MultiResultActivity extends FragmentActivity {
              * 恒久処置になるかも？？？
              */
             if (i >= 10) break;
-            
+
             //対象のチェックボックスを取得
             String idStr = "draw_checkbox_" + String.valueOf(i);
 
@@ -320,7 +320,8 @@ public class MultiResultActivity extends FragmentActivity {
         PopupWindow popHanteiWindow = new PopupWindow(MultiResultActivity.this);
 
         // レイアウト設定
-        View popupView = getLayoutInflater().inflate(R.layout.pop_hantei_result, null);
+//        View popupView = getLayoutInflater().inflate(R.layout.pop_hantei_result, null);
+        View popupView = getLayoutInflater().inflate(R.layout.pop_hantei_result, (ViewGroup)findViewById(R.id.pop_hantei_root_layout), false);
 
         //等幅フォント(MONOSPACE)の指定
         TextView tv = (TextView)popupView.findViewById(R.id.pop_hantei_result_view);

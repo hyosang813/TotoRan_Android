@@ -3,6 +3,7 @@ package raksam.com.totoran;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.database.sqlite.SQLiteCantOpenDatabaseException;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.io.IOException;
@@ -46,7 +47,7 @@ public class CheckDatabaseData {
         Cursor cursor = db.rawQuery(QueryStr, null);
 
         //結果が０件だったらNonを返す
-        String holdNum = "";
+        String holdNum;
         if(cursor.moveToFirst()) {
             holdNum = cursor.getString(cursor.getColumnIndex("open_number"));
         } else {

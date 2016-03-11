@@ -8,8 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 
@@ -31,7 +29,6 @@ public class OkAlertDialogFragment extends DialogFragment {
         //アラート作成
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(getArguments().getString("title"));
-//        builder.setMessage(getArguments().getString("message"));
         builder.setView(tV);
 
         //OKボタン押下時の挙動

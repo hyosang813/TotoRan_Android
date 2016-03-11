@@ -74,7 +74,7 @@ public class GetKaisuTableData {
                     String yearStr = trimStr.substring(0, 4) + "-" + trimStr.substring(5, 7) + "-" + trimStr.substring(8, 10) + " " ;
 
                     //時分秒は処理ディスパッチ
-                    String hourStr = "";
+                    String hourStr;
                     if (startAndEndCount == 0) {
                         hourStr = trimStr.substring(14, 16) + ":" + trimStr.substring(17, 19);
                     } else {

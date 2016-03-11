@@ -32,7 +32,7 @@ public class MultiToSingleLogic {
 
         //マルチの数列から全組み合わせのシングル数列を生成
         ArrayList<ArrayList<String>> mTosStrArray = new ArrayList<>();
-        int p = 0, s = 0; // p:商, s:余り
+        int p, s; // p:商, s:余り
 
         // (3) 組み合わせをcombiCount回求める（i：組み合わせ番号）
         for (int i = 0; i < combiCount; i++) {
@@ -42,7 +42,7 @@ public class MultiToSingleLogic {
             p = i;
             for (int j = 0; j < localMultiDataArray.size(); j++) {
                 s = p % localMultiDataArray.get(j).size();
-                p = (p - s) / localMultiDataArray.get(j).size();;
+                p = (p - s) / localMultiDataArray.get(j).size();
 
                 childMTosStrArray.add(localMultiDataArray.get(j).get(s));
             }
