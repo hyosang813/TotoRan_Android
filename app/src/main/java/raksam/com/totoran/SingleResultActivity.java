@@ -51,8 +51,8 @@ public class SingleResultActivity extends FragmentActivity {
         RelativeLayout rootLayout = (RelativeLayout) findViewById(R.id.single_result);
 
         // 1 NendAdView をインスタンス化
-        adView = new NendAdView(this, 3174, "c5cb8bc474345961c6e7a9778c947957ed8e1e4f"); //テスト
-//        adView = new NendAdView(this, 555646, "6d5a08cb10ed4fb4359de92bb644a7dec23a20a1"); //本番
+//        adView = new NendAdView(this, 3174, "c5cb8bc474345961c6e7a9778c947957ed8e1e4f"); //テスト
+        adView = new NendAdView(this, 555646, "6d5a08cb10ed4fb4359de92bb644a7dec23a20a1"); //本番
 
         // 2 NendAdView をレイアウトに追加
         rootLayout.addView(adView, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
