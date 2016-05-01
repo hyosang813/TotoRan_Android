@@ -39,8 +39,14 @@ public class MultiResultActivity extends FragmentActivity {
     //判定文字列削減有無(小文字)
     public ArrayList<ArrayList<Object>> hanteiStrLowerArray;
 
+    //ホーム削減有無
+    public ArrayList<ArrayList<Object>> homeGroupArray; // 20160501追加
+
     //ドロー削減有無
     public ArrayList<ArrayList<Object>> drawGroupArray;
+
+    //アウェイ削減有無
+    public ArrayList<ArrayList<Object>> awayGroupArray; // 20160501追加
 
     //最終表示用変数用意
     private String displayText = "";
@@ -101,8 +107,10 @@ public class MultiResultActivity extends FragmentActivity {
          */
         hanteiStrUpperArray = new ArrayList<>();
         hanteiStrLowerArray = new ArrayList<>();
+        homeGroupArray = new ArrayList<>();
         drawGroupArray = new ArrayList<>();
-        targetStrArray = MultiToSingleLogic.multiToSingleDataMake(randomStrArray, hanteiStrUpperArray, hanteiStrLowerArray, drawGroupArray, common.totoRateArray, common.bookRateArray);
+        awayGroupArray = new ArrayList<>();
+        targetStrArray = MultiToSingleLogic.multiToSingleDataMake(randomStrArray, hanteiStrUpperArray, hanteiStrLowerArray, homeGroupArray, drawGroupArray, awayGroupArray, common.totoRateArray, common.bookRateArray);
     }
 
     //戻るボタン押下
@@ -129,6 +137,47 @@ public class MultiResultActivity extends FragmentActivity {
         overridePendingTransition(R.anim.in_left, R.anim.out_right);
     }
 
+    //プチ削減のホーム、ドロー、アウェイのチェックボックス生成
+    void checkBoxMake(ArrayList<ArrayList<Object>> groupArray, View popupView, String partStr) {
+
+        int arrayCounter = 1;
+        for (int i = Integer.valueOf(groupArray.get(0).get(0).toString()); i <= Integer.valueOf(groupArray.get(groupArray.size() - 1).get(0).toString()); i++) {
+            /**
+             * 応急処置的にドロー10以上は対象外にする
+             * 恒久処置になるかも？？？
+             */
+            if (i >= 10) break;
+
+            //対象のチェックボックスを取得
+            String idStr = partStr + "_checkbox_" + String.valueOf(i);
+
+            int cbId = getResources().getIdentifier(idStr, "id", getPackageName());
+            CheckBox cb = (CheckBox)popupView.findViewById(cbId);
+            cb.setVisibility(View.VISIBLE);
+            cb.setTypeface(Typeface.MONOSPACE);
+
+            //最初の数値はチェックボックスTrueでグレーアウト
+            if (i == Integer.valueOf(groupArray.get(0).get(0).toString())) {
+                cb.setChecked(true);
+                cb.setEnabled(false);
+                continue;
+            }
+
+            //ホーム、ドロー、アウェイ数の最低数の次の要素からはArrayの状況を設定
+            cb.setChecked(Boolean.valueOf(groupArray.get(arrayCounter).get(1).toString()));
+
+            //ホーム、ドロー、アウェイ数チェックボックスのクリックリスナー
+            checkArraySynchronism(cb, groupArray);
+
+            arrayCounter++;
+        }
+
+        //異動
+        String idStrFN = partStr + "_checkboxes_five_for_nine";
+        String idStrZF = partStr + "_checkboxes_zero_for_four";
+        secondForFirstMove(popupView, getResources().getIdentifier(idStrFN, "id", getPackageName()), getResources().getIdentifier(idStrZF, "id", getPackageName()));
+    }
+
     //プチ削減ボタン押下で削減条件指定画面ポップアップ
     public void popSakugen(View v) {
         //ボタン連打制御(１秒)
@@ -140,41 +189,10 @@ public class MultiResultActivity extends FragmentActivity {
         // レイアウト設定
         final View popupView = getLayoutInflater().inflate(R.layout.pop_reduce_result, (ViewGroup)findViewById(R.id.pop_reduce_root_layout), false);
 
-        //ドローの選択チェックボックス
-        int arrayCounter = 1;
-        for (int i = Integer.valueOf(drawGroupArray.get(0).get(0).toString()); i <= Integer.valueOf(drawGroupArray.get(drawGroupArray.size() - 1).get(0).toString()); i++) {
-            /**
-             * 応急処置的にドロー10以上は対象外にする
-             * 恒久処置になるかも？？？
-             */
-            if (i >= 10) break;
-
-            //対象のチェックボックスを取得
-            String idStr = "draw_checkbox_" + String.valueOf(i);
-
-            int cbId = getResources().getIdentifier(idStr, "id", getPackageName());
-            CheckBox cb = (CheckBox)popupView.findViewById(cbId);
-            cb.setVisibility(View.VISIBLE);
-            cb.setTypeface(Typeface.MONOSPACE);
-
-            //最初の数値はチェックボックスTrueでグレーアウト
-            if (i == Integer.valueOf(drawGroupArray.get(0).get(0).toString())) {
-                cb.setChecked(true);
-                cb.setEnabled(false);
-                continue;
-            }
-
-            //ドロー数の最低数の次の要素からはArrayの状況を設定
-            cb.setChecked(Boolean.valueOf(drawGroupArray.get(arrayCounter).get(1).toString()));
-
-            //ドロー数チェックボックスのクリックリスナー
-            checkArraySynchronism(cb, drawGroupArray);
-
-            arrayCounter++;
-        }
-
-        //異動
-        secondForFirstMove(popupView, R.id.draw_checkboxes_five_for_nine, R.id.draw_checkboxes_zero_for_four);
+        //ホーム、ドロー、アウェイの選択チェックボックス
+        checkBoxMake(homeGroupArray, popupView, "home");
+        checkBoxMake(drawGroupArray, popupView, "draw");
+        checkBoxMake(awayGroupArray, popupView, "away");
 
         //大文字、小文字判定チェックボックス
         ArrayList<String> bigOrSmall = new ArrayList<>();
@@ -217,8 +235,12 @@ public class MultiResultActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 //表示されているチェックボックスの全て選択仕直し
-                int sectionIdArray[] = {R.id.draw_checkboxes_zero_for_four,
+                int sectionIdArray[] = {R.id.home_checkboxes_zero_for_four,
+                                        R.id.home_checkboxes_five_for_nine,
+                                        R.id.draw_checkboxes_zero_for_four,
                                         R.id.draw_checkboxes_five_for_nine,
+                                        R.id.away_checkboxes_zero_for_four,
+                                        R.id.away_checkboxes_five_for_nine,
                                         R.id.upper_checkboxes_s_for_d,
                                         R.id.upper_checkboxes_e_for_f,
                                         R.id.lower_checkboxes_s_for_d,
@@ -235,7 +257,9 @@ public class MultiResultActivity extends FragmentActivity {
                 ArrayList<ArrayList<ArrayList<Object>>> threeArrays = new ArrayList<>();
                 threeArrays.add(hanteiStrLowerArray);
                 threeArrays.add(hanteiStrUpperArray);
+                threeArrays.add(homeGroupArray);
                 threeArrays.add(drawGroupArray);
+                threeArrays.add(awayGroupArray);
                 for (ArrayList<ArrayList<Object>> grandArray : threeArrays) {
                     for (ArrayList<Object> parentArray : grandArray) {
                         parentArray.set(1, true);
@@ -330,8 +354,11 @@ public class MultiResultActivity extends FragmentActivity {
         //プチ削減
         ArrayList<ArrayList<String>> reduceTargetStrArray = new ArrayList<>();
         for (ArrayList<String> targetStr : targetStrArray) {
-            //ドロー数が対象かどうかチェック
-            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(targetStr.size() - 1)), drawGroupArray)) continue;
+            //ホーム、ドロー、アウェイ数が対象かどうかチェック
+            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(targetStr.size() - 3)), homeGroupArray)) continue;
+            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(targetStr.size() - 2)), drawGroupArray)) continue;
+            if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(targetStr.size() - 1)), awayGroupArray)) continue;
+
             //大文字判定対象かどうかチェック
             if (!reduceTargetYesOrNo(String.valueOf(targetStr.get(13)), hanteiStrUpperArray)) continue;
 
@@ -345,13 +372,14 @@ public class MultiResultActivity extends FragmentActivity {
         }
 
         //削減の結果で処理変更
-        final String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray, common.dataGetTime);
+        final String reduceText = reduceTargetStrArray.size() == 0 ? "結果なし" : HanteiStrMake.resultHanteiStr(reduceTargetStrArray); //, common.dataGetTime);
+        final String reduceCount = reduceTargetStrArray.size() == 0 ? "" : "\n削減前:" + String.valueOf(targetStrArray.size()) + "口\n削減後:" + String.valueOf(reduceTargetStrArray.size()) + "口\n\n" + common.dataGetTime + "\n";
 
         //結果がなかったらコピーボタン非表示
         if (reduceTargetStrArray.size() == 0) popupView.findViewById(R.id.pop_hantei_copy_button).setVisibility(View.GONE);
 
         //整形データをTextViewにセット
-        tv.setText(reduceText);
+        tv.setText(reduceText + reduceCount);
 
         //コピーボタン押下時の挙動
         popupView.findViewById(R.id.pop_hantei_copy_button).setOnClickListener(new View.OnClickListener() {
@@ -361,7 +389,7 @@ public class MultiResultActivity extends FragmentActivity {
                 ClipboardManager clipBoard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
                 // コピーするデータをエディットテキストから取得する
-                ClipData clip = ClipData.newPlainText("copied_text", reduceText + "\n#トトラン！");
+                ClipData clip = ClipData.newPlainText("copied_text", reduceText  + reduceCount + "\n#トトラン！");
 
                 // クリップボードに内容をコピーする
                 clipBoard.setPrimaryClip(clip);

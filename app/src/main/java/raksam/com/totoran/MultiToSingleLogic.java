@@ -13,7 +13,9 @@ public class MultiToSingleLogic {
     public static ArrayList<ArrayList<String>> multiToSingleDataMake(ArrayList<ArrayList<String>> multiDataArray,
                                                                      ArrayList<ArrayList<Object>> hanteiStrUpperArray,
                                                                      ArrayList<ArrayList<Object>> hanteiStrLowerArray,
+                                                                     ArrayList<ArrayList<Object>> homeGroupArray,
                                                                      ArrayList<ArrayList<Object>> drawGroupArray,
+                                                                     ArrayList<ArrayList<Object>> awayGroupArray,
                                                                      ArrayList<ArrayList<String>> totoRateArray,
                                                                      ArrayList<ArrayList<String>> bookRateArray) {
 
@@ -55,18 +57,29 @@ public class MultiToSingleLogic {
         //数列単位で0の個数を追加しつつ、ドローと大文字と小文字の全種類をひろう
         ArrayList<String> upperStrArray = new ArrayList<>(); //大文字
         ArrayList<String> lowerStrArray = new ArrayList<>(); //小文字
+        ArrayList<Integer> homeStrArray = new ArrayList<>(); //ホーム
         ArrayList<Integer> drawStrArray = new ArrayList<>(); //ドロー
+        ArrayList<Integer> awayStrArray = new ArrayList<>(); //アウェイ
         for (ArrayList<String> singleWakuArray : singleHanteiStrArray) {
-            //まずはドローの数を調査
+            //まずはホーム、ドロー、アウェイの数を調査
+            int homeCount = 0;
             int drawCount = 0;
+            int awayCount = 0;
             for (int i = 0; i < 13; i++) {
+                if (singleWakuArray.get(i).equals("1")) homeCount++;
                 if (singleWakuArray.get(i).equals("0")) drawCount++;
+                if (singleWakuArray.get(i).equals("2")) awayCount++;
             }
-            //ドローの数を最後尾に追加
-            singleWakuArray.add(String.valueOf(drawCount));
 
-            //ドローと大文字と小文字が存在しなかったら追加
+            //ホーム、ドロー、アウェイの数を最後尾に追加
+            singleWakuArray.add(String.valueOf(homeCount));
+            singleWakuArray.add(String.valueOf(drawCount));
+            singleWakuArray.add(String.valueOf(awayCount));
+
+            //ホーム、ドロー、アウェイと大文字と小文字が存在しなかったら追加
+            if (!homeStrArray.contains(homeCount)) homeStrArray.add(homeCount);
             if (!drawStrArray.contains(drawCount)) drawStrArray.add(drawCount);
+            if (!awayStrArray.contains(awayCount)) awayStrArray.add(awayCount);
             if (!upperStrArray.contains(singleWakuArray.get(13))) upperStrArray.add(singleWakuArray.get(13));
 
             //bookRateは存在しない可能性あり
@@ -76,17 +89,33 @@ public class MultiToSingleLogic {
         }
 
         //それぞれの種類をソート
+        Collections.sort(homeStrArray);
         Collections.sort(drawStrArray);
+        Collections.sort(awayStrArray);
         Collections.sort(upperStrArray);
         Collections.sort(lowerStrArray); //bookRateは存在しない可能性ありだけど悪さはしないでしょ
 
         
         //スイッチ用にbooleanとセットにする(初期値はtrue)
+        for (Integer homeCount : homeStrArray) {
+            ArrayList<Object> mixBoolData = new ArrayList<>();
+            mixBoolData.add(String.valueOf(homeCount));
+            mixBoolData.add(true);
+            homeGroupArray.add(mixBoolData);
+        }
+
         for (Integer drawCount : drawStrArray) {
             ArrayList<Object> mixBoolData = new ArrayList<>();
             mixBoolData.add(String.valueOf(drawCount));
             mixBoolData.add(true);
             drawGroupArray.add(mixBoolData);
+        }
+
+        for (Integer awayCount : awayStrArray) {
+            ArrayList<Object> mixBoolData = new ArrayList<>();
+            mixBoolData.add(String.valueOf(awayCount));
+            mixBoolData.add(true);
+            awayGroupArray.add(mixBoolData);
         }
 
         for (String upperString : upperStrArray) {

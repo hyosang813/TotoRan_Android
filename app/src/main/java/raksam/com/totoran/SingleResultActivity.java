@@ -44,8 +44,8 @@ public class SingleResultActivity extends FragmentActivity {
         tv.setTypeface(Typeface.MONOSPACE);
 
         //整形データをTextViewにセット
-        singleHanteiStr = HanteiStrMake.resultHanteiStr(hanteiStrArray, common.dataGetTime);
-        tv.setText(singleHanteiStr);
+        singleHanteiStr = HanteiStrMake.resultHanteiStr(hanteiStrArray); //, common.dataGetTime);
+        tv.setText(singleHanteiStr + "\n" + common.dataGetTime + "\n");
 
         //NEND広告の表示
         RelativeLayout rootLayout = (RelativeLayout) findViewById(R.id.single_result);

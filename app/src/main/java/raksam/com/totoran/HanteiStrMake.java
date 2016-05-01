@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class HanteiStrMake {
     //判定文字列を整形して最後に支持率取得時点を付与して返す
-    public static String resultHanteiStr(ArrayList<ArrayList<String>> hanteiStrArray, String jitenStr) {
+    public static String resultHanteiStr(ArrayList<ArrayList<String>> hanteiStrArray) {//, String jitenStr) {
         //返す文字列変数
         String returnStr = "";
 
@@ -17,7 +17,7 @@ public class HanteiStrMake {
         for (ArrayList<String> strArray : hanteiStrArray) {
             for (int i = 0; i < strArray.size(); i++) {
                 //マルチのdraw数は落とす
-                if ((strArray.size() == 18 && i == 17) || (strArray.size() == 16 && i == 15)) break; //bookない場合もある対応
+                if ((strArray.size() == 20 && i == 17) || (strArray.size() == 18 && i == 15)) break; //bookない場合もある対応
 
                 returnStr += strArray.get(i);
 
@@ -37,7 +37,7 @@ public class HanteiStrMake {
         }
 
         //最後に改行を入れて支持率取得時点を追加
-        returnStr += "\n" + jitenStr + "\n";
+        //returnStr += "\n" + jitenStr + "\n";
 
         //返す
         return returnStr;

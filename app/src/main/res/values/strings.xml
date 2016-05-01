@@ -51,7 +51,9 @@
 
     <!-- プチ削減画面 -->
     <string name="all_tap">全選択</string>
+    <string name="home_checkbox_title_str">◆ホーム(1)の数で絞る</string>
     <string name="draw_checkbox_title_str">◆ドロー(0)の数で絞る</string>
+    <string name="away_checkbox_title_str">◆アウェイ(2)の数で絞る</string>
     <string name="upper_checkbox_title_str">◆大文字判定で絞る(toto)</string>
     <string name="lower_checkbox_title_str">◆小文字判定で絞る(book)</string>
 
